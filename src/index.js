@@ -679,5 +679,6 @@ app.onload = ()=>{
         header.classList.add('visually-hidden');
         form.classList.add('visually-hidden');
         printBtn.classList.add('visually-hidden');
+        print();
     }
 };
