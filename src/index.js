@@ -675,7 +675,6 @@ app.onload = ()=>{
     const toPrint = getID('toPrint');
     const header = getID('header');
     const form = getID('form');
-    
     printBtn.onclick = ()=>{
         header.classList.add('visually-hidden');
         form.classList.add('visually-hidden');
