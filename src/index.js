@@ -89,6 +89,30 @@ app.onload = ()=>{
         divPostalCode: ()=>{
             let rDivPostalCode = getID('rPostalCodeDiv');
             return rDivPostalCode;
+        },
+        report: ()=>{
+            let report = getID('reportCase');
+            return report;
+        },
+        divReport: ()=>{
+            let divReport = getID('divReportCase');
+            return divReport;
+        },
+        request: ()=>{
+            let request = getID('request');
+            return request;
+        },
+        divRequest: ()=>{
+            let divRequest = getID('divRequest');
+            return divRequest;
+        },
+        value: ()=>{
+            let value = getID('value');
+            return value;
+        },
+        divValue: ()=>{
+            let divValue = getID('divValue');
+            return divValue;
         }
     }
 
@@ -175,7 +199,85 @@ app.onload = ()=>{
         }
     }
 
-    function validateData(){
+    const targets = {
+        requesterName: ()=>{
+            let requesterName = getID('requesterNameTarget');
+            return requesterName;
+        },
+        requesterAddress: ()=>{
+            let requesterAddress = getID('requesterAddressTarget');
+            return requesterAddress;
+        },
+        requesterDocument: ()=>{
+            let requesterDocument = getID('requesterDocTarget');
+            return requesterDocument;
+        },
+        requesterEmail: ()=>{
+            let requesterEmail = getID('requesterEmailTarget');
+            return requesterEmail;
+        },
+        requesterPhone: ()=>{
+            let requesterPhone = getID('requesterPhoneTarget');
+            return requesterPhone;
+        },
+        requiredName: ()=>{
+            let requiredName = getID('requiredNameTarget');
+            return requiredName;
+        },
+        requiredAddress: ()=>{
+            let requiredAddress = getID('requiredAddressTarget');
+            return requiredAddress;
+        },
+        requiredDocument: ()=>{
+            let requiredDocument = getID('requiredDocTarget');
+            return requiredDocument;
+        },
+        requiredEmail: ()=>{
+            let requiredEmail = getID('requiredEmailTarget');
+            return requiredEmail;
+        },
+        requiredPhone: ()=>{
+            let requiredPhone = getID('requiredPhoneTarget');
+            return requiredPhone;
+        },
+        reportTarget: ()=>{
+            let reportTarget = getID('reportTarget');
+            return reportTarget;
+        },
+        requestTextTarget: ()=>{
+            let requestTextTarget = getID('requestTextTarget');
+            return requestTextTarget;
+        },
+        requestsTarget: ()=>{
+            let requestsTarget = getID('requestsTarget');
+            return requestsTarget;
+            // append <li> tag
+        },
+        valueTarget: ()=>{
+            let valueTarget = getID('valueTarget');
+            return valueTarget;
+        },
+        signerName: ()=>{
+            let signerName = getID('signerNameTarget');
+            return signerName;
+        },
+        signerDocument: ()=>{
+            let signerDocument = getID('signerDocument');
+            return signerDocument;
+        },
+        dateTarget: ()=>{
+            let dateTarget = getID('dateTarget');
+            return dateTarget;
+        },
+        documentDiv: ()=>{
+            let documentDiv = getID('toPrint');
+            return documentDiv;
+        }
+    }
+
+    function validateValues(){
+        let isValid = true;
+
         // NOME
         let rName = requester.name();
         let rDivName = requester.divName();
@@ -187,6 +289,7 @@ app.onload = ()=>{
             rDivName.classList.add('is-invalid');
             rName.classList.add('is-invalid');
             app.scrollTo(30, 30);
+            isValid = false;
         }
         let rdName = requested.name();
         let rdDivName = requested.divName();
@@ -198,6 +301,7 @@ app.onload = ()=>{
             rdDivName.classList.add('is-invalid');
             rdName.classList.add('is-invalid');
             app.scrollTo(1400, 1400);
+            isValid = false;
         }
 
         // CPF
@@ -211,6 +315,7 @@ app.onload = ()=>{
             rDivCpf.classList.add('is-invalid');
             rCpf.classList.add('is-invalid');
             app.scrollTo(30, 30);
+            isValid = false;
         }
         let rdCpf = requested.cpf();
         let rdDivCpf = requested.divCpf();
@@ -222,6 +327,7 @@ app.onload = ()=>{
             rdDivCpf.classList.add('is-invalid');
             rdCpf.classList.add('is-invalid');
             app.scrollTo(1400, 1400);
+            isValid = false;
         }
 
         // EMAIL
@@ -235,6 +341,7 @@ app.onload = ()=>{
             rDivEmail.classList.add('is-invalid');
             rEmail.classList.add('is-invalid');
             app.scrollTo(30, 30);
+            isValid = false;
         }
         let rdEmail = requested.email();
         let rdDivEmail = requested.divEmail();
@@ -246,6 +353,7 @@ app.onload = ()=>{
             rdDivEmail.classList.add('is-invalid');
             rdEmail.classList.add('is-invalid');
             app.scrollTo(1400, 1400);
+            isValid = false;
         }
 
         // TELEFONE
@@ -259,6 +367,7 @@ app.onload = ()=>{
             rDivPhone.classList.add('is-invalid');
             rPhone.classList.add('is-invalid');
             app.scrollTo(180, 180);
+            isValid = false;
         }
         let rdPhone = requested.phone();
         let rdDivPhone = requested.divPhone();
@@ -270,6 +379,7 @@ app.onload = ()=>{
             rdDivPhone.classList.add('is-invalid');
             rdPhone.classList.add('is-invalid');
             app.scrollTo(1400, 1400);
+            isValid = false;
         }
 
         //RUA
@@ -283,6 +393,7 @@ app.onload = ()=>{
             rDivStreet.classList.add('is-invalid');
             rStreet.classList.add('is-invalid');
             app.scrollTo(750, 750);
+            isValid = false;
         }
         let rdStreet = requested.street();
         let rdDivStreet = requested.divStreet();
@@ -294,6 +405,7 @@ app.onload = ()=>{
             rdDivStreet.classList.add('is-invalid');
             rdStreet.classList.add('is-invalid');
             app.scrollTo(1900, 1900);
+            isValid = false;
         }
 
         // NUMERO
@@ -307,6 +419,7 @@ app.onload = ()=>{
             rDivNumber.classList.add('is-invalid');
             rNumber.classList.add('is-invalid');
             app.scrollTo(750, 750);
+            isValid = false;
         }
         let rdNumber = requested.number();
         let rdDivNumber = requested.divNumber();
@@ -318,6 +431,7 @@ app.onload = ()=>{
             rdDivNumber.classList.add('is-invalid');
             rdNumber.classList.add('is-invalid');
             app.scrollTo(1900, 1900);
+            isValid = false;
         }
 
         // BAIRRO
@@ -331,6 +445,7 @@ app.onload = ()=>{
             rDivDistrict.classList.add('is-invalid');
             rDistrict.classList.add('is-invalid');
             app.scrollTo(750, 750);
+            isValid = false;
         }
         let rdDistrict = requested.district();
         let rdDivDistrict = requested.divDistrict();
@@ -342,6 +457,7 @@ app.onload = ()=>{
             rdDivDistrict.classList.add('is-invalid');
             rdDistrict.classList.add('is-invalid');
             app.scrollTo(1900, 1900);
+            isValid = false;
         }
 
         // CIDADE
@@ -355,6 +471,7 @@ app.onload = ()=>{
             rDivCity.classList.add('is-invalid');
             rCity.classList.add('is-invalid');
             app.scrollTo(750, 750);
+            isValid = false;
         }
         let rdCity = requested.city();
         let rdDivCity = requested.divCity();
@@ -366,6 +483,7 @@ app.onload = ()=>{
             rdDivCity.classList.add('is-invalid');
             rdCity.classList.add('is-invalid');
             app.scrollTo(1900, 1900);
+            isValid = false;
         }
 
         // CEP
@@ -379,6 +497,7 @@ app.onload = ()=>{
             rDivPostalCode.classList.add('is-invalid');
             rPostalCode.classList.add('is-invalid');
             app.scrollTo(750, 750);
+            isValid = false;
         }
         let rdPostalCode = requested.postalCode();
         let rdDivPostalCode = requested.divPostalCode();
@@ -390,11 +509,177 @@ app.onload = ()=>{
             rdDivPostalCode.classList.add('is-invalid');
             rdPostalCode.classList.add('is-invalid');
             app.scrollTo(2200, 2200);
+            isValid = false;
         }
 
+        // RELATO DO CASO
+        let report = requester.report();
+        let divReport = requester.divReport();
+        if (report.value !== ''){
+            report.classList.remove('is-invalid');
+            divReport.classList.remove('is-invalid');
+            console.log(report.value);
+        }else {
+            divReport.classList.add('is-invalid');
+            report.classList.add('is-invalid');
+            app.scrollTo(900, 900);
+            isValid = false;
+        }
+
+        // DOS PEDIDOS
+        let request = requester.request();
+        let divRequest = requester.divRequest();
+        if (request.value !== ''){
+            request.classList.remove('is-invalid');
+            divRequest.classList.remove('is-invalid');
+            console.log(request.value);
+        }else {
+            divRequest.classList.add('is-invalid');
+            request.classList.add('is-invalid');
+            app.scrollTo(1100, 1100);
+            isValid = false;
+        }
+
+        // VALOR DA CAUSA
+        let value = requester.value();
+        let divValue = requester.divValue();
+        if (value.value !== ''){
+            value.classList.remove('is-invalid');
+            divValue.classList.remove('is-invalid');
+            console.log(value.value);
+        }else {
+            divValue.classList.add('is-invalid');
+            value.classList.add('is-invalid');
+            app.scrollTo(1200, 1200);
+            isValid = false;
+        }
+        return isValid;
     }
 
     btn.onclick = ()=>{
-        validateData();
+        validateValues();
+        if (validateValues()){
+            alert('valores válidos');
+            
+            // RECLAMANTE
+            let requesterNameTarget = targets.requesterName();
+            let requesterNameValue = requester.name().value;
+            requesterNameTarget.innerText = requesterNameValue.toUpperCase();
+            
+            // ENDEREÇO
+            let requesterStreet = requester.street().value;
+            let requesterNumber = requester.number().value;
+            let requesterCity = requester.city().value;
+            // let requesterState = requester.state().value;
+            let requesterPostalCode = requester.postalCode().value;
+            let requesterAddress = 'R: ' + requesterStreet.toUpperCase() + ' ' + 'N: ' + requesterNumber.toUpperCase() + ' ' + requesterCity.toUpperCase() + '/' + 'PR' + ' CEP: ' + requesterPostalCode;
+            let requesterAddressTarget = targets.requesterAddress();
+            requesterAddressTarget.innerText = requesterAddress;
+
+            // CPF/CNPJ
+            let requesterDocument = requester.cpf().value;
+            let requesterDocumentTarget = targets.requesterDocument();
+            requesterDocumentTarget.innerText = requesterDocument;
+
+            // EMAIL
+            let requesterEmail = requester.email().value;
+            let requesterEmailTarget = targets.requesterEmail();
+            requesterEmailTarget.innerText = requesterEmail;
+
+            // WHATSAPP TELEFONE
+            let requesterPhone = requester.phone().value;
+            let requesterPhoneTarget = targets.requesterPhone();
+            requesterPhoneTarget.innerText = requesterPhone;
+
+            // RECLAMADO
+            let requiredName = requested.name().value;
+            let requiredNameTarget = targets.requiredName();
+            requiredNameTarget.innerText = requiredName.toUpperCase();
+
+            // ENDEREÇO
+            let requiredStreet = requested.street().value;
+            let requiredNumber = requested.number().value;
+            let requiredCity = requested.city().value;
+            // let requiredState = requested.state().value;
+            let requiredPostalCode = requested.postalCode().value;
+            let requiredAddress = 'R: '+requiredStreet.toUpperCase()+' N: '+requiredNumber+' '+requiredCity.toUpperCase()+'/PR'+' CEP: '+requiredPostalCode;
+            let requiredAddressTarget = targets.requiredAddress();
+            requiredAddressTarget.innerText = requiredAddress;
+
+            // CPF/CNPJ
+            let requiredDocument = requested.cpf().value;
+            let requiredDocumentTarget = targets.requiredDocument();
+            requiredDocumentTarget.innerText = requiredDocument;
+
+            // EMAIL
+            let requiredEmail = requested.email().value;
+            let requiredEmailTarget = targets.requiredEmail();
+            requiredEmailTarget.innerText = requiredEmail;
+
+            // WHATSAPP TELEFONE
+            let requiredPhone = requested.phone().value;
+            let requiredPhoneTarget = targets.requiredPhone();
+            requiredPhoneTarget.innerText = requiredPhone;
+
+            // DOS FATOS
+            let report = requester.report().value;
+            let reportTarget = targets.reportTarget();
+            reportTarget.innerText = report;
+
+            // DOS PEDIDOS
+            let request = requester.request().value;
+            let requestTarget = targets.requestTextTarget();
+            requestTarget.innerText = request;
+
+            // VALOR DA CAUSA
+            let causeValue = requester.value().value;
+            let causeValueTarget = targets.valueTarget();
+            causeValueTarget.innerText = causeValue;
+
+            // DATA
+            let date = new Date();
+            let day = date.getDate();
+            let month = date.getMonth();
+            let months = [
+                'Janeiro',
+                'Fevereiro',
+                'Março',
+                'Abril',
+                'Maio',
+                'Junho',
+                'Julho',
+                'Agosto',
+                'Setembro',
+                'Outubro',
+                'Novembro',
+                'Dezembro'
+            ];
+            let monthName = months[month];
+            let formatedDay = day < 10 ? '0' + day : day;
+            let year = date.getFullYear();
+            let today = `Itapoá (SC), ${formatedDay} de ${monthName} de ${year}.`;
+            let dateTarget = targets.dateTarget();
+            dateTarget.innerText = today;
+
+            // ASSINANTE
+            let signerName = requester.name().value;
+            let signerDocument = requester.cpf().value;
+            let signerNameTarget = targets.signerName();
+            let signerDocumentTarget = targets.signerDocument();
+
+            signerNameTarget.innerText = signerName.toUpperCase();
+            signerDocumentTarget.innerText = signerDocument;
+        }
+    }
+    const printBtn = getID('printBtn');
+    const toPrint = getID('toPrint');
+    const header = getID('header');
+    const form = getID('form');
+    
+    printBtn.onclick = ()=>{
+        header.classList.add('visually-hidden');
+        form.classList.add('visually-hidden');
+        printBtn.classList.add('visually-hidden');
+        print();
     }
 };

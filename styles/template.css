@@ -1,0 +1,133 @@
+.hidden {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.to-print {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: #fafafa;
+}
+.to-print .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-direction: column;
+}
+.to-print h1 {
+    font-size: 15px;
+    font-weight: 600;
+}
+.to-print h2 {
+    font-size: 15px;
+}
+.to-print p {
+    font-size: 15px;
+}
+.to-print .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 3rem;
+}
+.to-print .header .svg {
+    width: 100px;
+    height: 100px;
+    margin: .5rem;
+}
+.to-print .justica-gratuita {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 5rem;
+}
+.to-print .page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.to-print .title {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: .3rem;
+    border: 1px solid #000;
+    background-color: gray;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+.to-print .page-text {
+    margin: 1rem 0;
+}
+.acao {
+    display: flex;
+}
+.acao h2 {
+    padding: 0 .3rem;
+}
+.reclamante-info,
+.reclamado-info {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+.reclamante-info div,
+.reclamado-info div {
+    display: flex;
+    flex-direction: row;
+    margin: .1rem 0;
+}
+.reclamante-info div h2,
+.reclamado-info div h2 {
+    padding: 0 .3rem;
+}
+.dos-fatos,
+.do-pedido,
+.valor-da-causa {
+    margin: 1rem 0;
+    padding: .5rem 3rem;
+    font-size: 15px;
+}
+.dos-fatos p,
+.do-pedido li,
+.valor-da-causa p {
+    margin: 1rem 0;
+}
+ul {
+    list-style: decimal;
+    list-style-position: inside;
+}
+li {
+    padding: 0 3rem;
+}
+.target {
+    margin: 1rem 0;
+}
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer div {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
