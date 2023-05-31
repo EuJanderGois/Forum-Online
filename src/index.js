@@ -1,3 +1,5 @@
+
+
 const app = window;
 
 app.onload = ()=>{
@@ -486,6 +488,32 @@ app.onload = ()=>{
             isValid = false;
         }
 
+        // ESTADO
+        let rState = requester.state();
+        let rDivState = requester.divState();
+        if (rState.value !== '0'){
+            rState.classList.remove('is-invalid');
+            rDivState.classList.remove('is-invalid');
+            console.log(rState.value);
+        }else {
+            rDivState.classList.add('is-invalid');
+            rState.classList.add('is-invalid');
+            app.scrollTo(700, 700);
+            isValid = false;
+        }
+        let rdState = requested.state();
+        let rdDivState = requested.divState();
+        if (rdState.value !== '0'){
+            rdState.classList.remove('is-invalid');
+            rdDivState.classList.remove('is-invalid');
+            console.log(rdState.value);
+        }else {
+            rdDivState.classList.add('is-invalid');
+            rdState.classList.add('is-invalid');
+            app.scrollTo(2500, 2500);
+            isValid = false;
+        }
+
         // CEP
         let rPostalCode = requester.postalCode();
         let rDivPostalCode = requester.divPostalCode();
@@ -559,7 +587,6 @@ app.onload = ()=>{
     btn.onclick = ()=>{
         validateValues();
         if (validateValues()){
-            alert('valores válidos');
             
             // RECLAMANTE
             let requesterNameTarget = targets.requesterName();
@@ -570,9 +597,9 @@ app.onload = ()=>{
             let requesterStreet = requester.street().value;
             let requesterNumber = requester.number().value;
             let requesterCity = requester.city().value;
-            // let requesterState = requester.state().value;
+            let requesterState = requester.state().value;
             let requesterPostalCode = requester.postalCode().value;
-            let requesterAddress = 'R: ' + requesterStreet.toUpperCase() + ' ' + 'N: ' + requesterNumber.toUpperCase() + ' ' + requesterCity.toUpperCase() + '/' + 'PR' + ' CEP: ' + requesterPostalCode;
+            let requesterAddress = 'R: '+ requesterStreet.toUpperCase()+' N: '+requesterNumber.toUpperCase()+' '+requesterCity.toUpperCase()+'/'+requesterState+' CEP: '+requesterPostalCode;
             let requesterAddressTarget = targets.requesterAddress();
             requesterAddressTarget.innerText = requesterAddress;
 
@@ -600,9 +627,9 @@ app.onload = ()=>{
             let requiredStreet = requested.street().value;
             let requiredNumber = requested.number().value;
             let requiredCity = requested.city().value;
-            // let requiredState = requested.state().value;
+            let requiredState = requested.state().value;
             let requiredPostalCode = requested.postalCode().value;
-            let requiredAddress = 'R: '+requiredStreet.toUpperCase()+' N: '+requiredNumber+' '+requiredCity.toUpperCase()+'/PR'+' CEP: '+requiredPostalCode;
+            let requiredAddress = 'R: '+requiredStreet.toUpperCase()+' N: '+requiredNumber+' '+requiredCity.toUpperCase()+'/'+requiredState+' CEP: '+requiredPostalCode;
             let requiredAddressTarget = targets.requiredAddress();
             requiredAddressTarget.innerText = requiredAddress;
 
@@ -663,22 +690,26 @@ app.onload = ()=>{
 
             // ASSINANTE
             let signerName = requester.name().value;
-            let signerDocument = requester.cpf().value;
+            let signerDocument = 'CPF/CNPJ: ' +  requester.cpf().value;
             let signerNameTarget = targets.signerName();
             let signerDocumentTarget = targets.signerDocument();
 
             signerNameTarget.innerText = signerName.toUpperCase();
             signerDocumentTarget.innerText = signerDocument;
+
+            alert('Seu documento foi gerado com sucesso. Clique em imprimir para realizar o download!');
+            initialPrintBtn.classList.remove('visually-hidden');
         }
     }
-    const printBtn = getID('printBtn');
-    const toPrint = getID('toPrint');
+    const initialPrintBtn = getID('printBtn');
+    const printBtn = getID('continuePrint');
     const header = getID('header');
     const form = getID('form');
     printBtn.onclick = ()=>{
+        
         header.classList.add('visually-hidden');
         form.classList.add('visually-hidden');
-        printBtn.classList.add('visually-hidden');
+        initialPrintBtn.classList.add('visually-hidden');
         print();
     }
 };

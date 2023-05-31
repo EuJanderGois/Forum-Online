@@ -1,10 +1,8 @@
-.hidden {
-    display: none;
-}
-
-* {
+.to-print {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
 }
 .to-print {
@@ -15,7 +13,7 @@
     margin: 1rem;
     background-color: #fafafa;
 }
-.to-print .container {
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,60 +69,53 @@
     margin-top: 3rem;
 }
 .to-print .page-text {
-    margin: 1rem 0;
+    padding: 1rem;
 }
-.acao {
+.to-print .acao {
     display: flex;
 }
-.acao h2 {
+.to-print .acao h2 {
     padding: 0 .3rem;
 }
-.reclamante-info,
-.reclamado-info {
+.to-print .info {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
 }
-.reclamante-info div,
-.reclamado-info div {
+.to-print .info-div {
     display: flex;
     flex-direction: row;
     margin: .1rem 0;
 }
-.reclamante-info div h2,
-.reclamado-info div h2 {
+.to-print .info-div-name {
     padding: 0 .3rem;
 }
-.dos-fatos,
-.do-pedido,
-.valor-da-causa {
+.to-print .fatos-pedido-valor {
     margin: 1rem 0;
     padding: .5rem 3rem;
     font-size: 15px;
 }
-.dos-fatos p,
-.do-pedido li,
-.valor-da-causa p {
+.to-print .fatos-pedido-valor p {
     margin: 1rem 0;
 }
-ul {
+.to-print ul {
     list-style: decimal;
     list-style-position: inside;
 }
-li {
+.to-print li {
     padding: 0 3rem;
 }
-.target {
+.to-print .target {
     margin: 1rem 0;
 }
-.footer {
+.to-print .footer {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.footer div {
+.to-print .footer div {
     margin: 3rem 0;
     display: flex;
     flex-direction: column;
