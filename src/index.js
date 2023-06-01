@@ -13,191 +13,191 @@ app.onload = ()=>{
 
     const requester = {
         name: ()=>{
-            let rName = getID('rName');
-            return rName;
+            let element = getID('rName');
+            return element;
         },
-        divName: ()=>{
-            let rDivName = getID('rNameDiv');
-            return rDivName;
+        invalidName: ()=>{
+            let element = getID('rInvalidName');
+            return element;
         },
-        cpf: ()=>{
-            let rDoc = getID('rDoc');
-            return rDoc;
+        document: ()=>{
+            let element = getID('rDoc');
+            return element;
         },
-        divCpf: ()=>{
-            let rDivDoc = getID('rDocDiv');
-            return rDivDoc;
+        invalidDocument: ()=>{
+            let element = getID('rInvalidDocument');
+            return element;
         },
         email: ()=>{
-            let rEmail = getID('rEmail');
-            return rEmail;
+            let element = getID('rEmail');
+            return element;
         },
-        divEmail: ()=>{
-            let rDivEmail = getID('rEmailDiv');
-            return rDivEmail;
+        invalidEmail: ()=>{
+            let element = getID('rInvalidEmail');
+            return element;
         },
         phone: ()=>{
-            let rPhone = getID('rPhone');
-            return rPhone;
+            let element = getID('rPhone');
+            return element;
         },
-        divPhone: ()=>{
-            let rDivPhone = getID('rPhoneDiv');
-            return rDivPhone;
+        invalidPhone: ()=>{
+            let element = getID('rInvalidPhone');
+            return element;
         },
         street: ()=>{
-            let rStreet = getID('rStreet');
-            return rStreet;
+            let element = getID('rStreet');
+            return element;
         },
-        divStreet: ()=>{
-            let rDivStreet = getID('rStreetDiv');
-            return rDivStreet;
+        invalidStreet: ()=>{
+            let element = getID('rInvalidStreet');
+            return element;
         },
         number: ()=>{
-            let rNumber = getID('rNumber');
-            return rNumber;
+            let element = getID('rNumber');
+            return element;
         },
-        divNumber: ()=>{
-            let rDivNumber = getID('rNumberDiv');
-            return rDivNumber;
+        invalidNumber: ()=>{
+            let element = getID('rInvalidNumber');
+            return element;
         },
         district: ()=>{
-            let rDistrict = getID('rDistrict');
-            return rDistrict;
+            let element = getID('rDistrict');
+            return element;
         },
-        divDistrict: ()=>{
-            let rDivDistrict = getID('rDistrictDiv');
-            return rDivDistrict;
+        invalidDistrict: ()=>{
+            let element = getID('rInvalidDistrict');
+            return element;
         },
         city: ()=>{
-            let rCity = getID('rCity');
-            return rCity;
+            let element = getID('rCity');
+            return element;
         },
-        divCity: ()=>{
-            let rDivCity = getID('rCityDiv');
-            return rDivCity;
+        invalidCity: ()=>{
+            let element = getID('rInvalidCity');
+            return element;
         },
         state: ()=>{
-            let reqState = getID('rState');
-            return reqState;
+            let element = getID('rState');
+            return element;
         },
-        divState: ()=>{
-            let rDivState = getID('rStateDiv');
-            return rDivState;
+        invalidState: ()=>{
+            let element = getID('rInvalidState');
+            return element;
         },
         postalCode: ()=>{
-            let rPostalCode = getID('rPostalCode');
-            return rPostalCode;
+            let element = getID('rPostalCode');
+            return element;
         },
-        divPostalCode: ()=>{
-            let rDivPostalCode = getID('rPostalCodeDiv');
-            return rDivPostalCode;
+        invalidPostalCode: ()=>{
+            let element = getID('rInvalidPostalCode');
+            return element;
         },
         report: ()=>{
-            let report = getID('reportCase');
-            return report;
+            let element = getID('reportCase');
+            return element;
         },
-        divReport: ()=>{
-            let divReport = getID('divReportCase');
-            return divReport;
+        invalidReport: ()=>{
+            let element = getID('invalidReport');
+            return element;
         },
         request: ()=>{
-            let request = getID('request');
-            return request;
+            let element = getID('request');
+            return element;
         },
-        divRequest: ()=>{
-            let divRequest = getID('divRequest');
-            return divRequest;
+        invalidRequest: ()=>{
+            let element = getID('invalidRequest');
+            return element;
         },
         value: ()=>{
-            let value = getID('value');
-            return value;
+            let element = getID('value');
+            return element;
         },
-        divValue: ()=>{
-            let divValue = getID('divValue');
-            return divValue;
+        invalidValue: ()=>{
+            let element = getID('invalidValue');
+            return element;
         }
     }
 
     const requested = {
         name: ()=>{
-            let rdName = getID('rdName');
-            return rdName;
+            let element = getID('rdName');
+            return element;
         },
-        divName: ()=>{
-            let rdDivName = getID('rdNameDiv');
-            return rdDivName;
+        invalidName: ()=>{
+            let element = getID('rdInvalidName');
+            return element;
         },
-        cpf: ()=>{
-            let rdDoc = getID('rdDoc');
-            return rdDoc;
+        document: ()=>{
+            let element = getID('rdDoc');
+            return element;
         },
-        divCpf: ()=>{
-            let rdDivCpf = getID('rdDocDiv');
-            return rdDivCpf;
+        invalidDocument: ()=>{
+            let element = getID('rdInvalidDocument');
+            return element;
         },
         email: ()=>{
-            let rdEmail = getID('rdEmail');
-            return rdEmail;
+            let element = getID('rdEmail');
+            return element;
         },
-        divEmail: ()=>{
-            let rdDivEmail = getID('rdEmailDiv');
-            return rdDivEmail;
+        invalidEmail: ()=>{
+            let element = getID('rdInvalidEmail');
+            return element;
         },
         phone: ()=>{
-            let rdPhone = getID('rdPhone');
-            return rdPhone;
+            let element = getID('rdPhone');
+            return element;
         },
-        divPhone: ()=>{
-            let rdDivPhone = getID('rdPhoneDiv');
-            return rdDivPhone;
+        invalidPhone: ()=>{
+            let element = getID('rdInvalidPhone');
+            return element;
         },
         street: ()=>{
-            let rdStreet = getID('rdStreet');
-            return rdStreet;
+            let element = getID('rdStreet');
+            return element;
         },
-        divStreet: ()=>{
-            let rdDivStreet = getID('rdStreetDiv');
-            return rdDivStreet;
+        invalidStreet: ()=>{
+            let element = getID('rdInvalidStreet');
+            return element;
         },
         number: ()=>{
-            let rdNumber = getID('rdNumber');
-            return rdNumber;
+            let element = getID('rdNumber');
+            return element;
         },
-        divNumber: ()=>{
-            let rdDivNumber = getID('rdNumberDiv');
-            return rdDivNumber;
+        invalidNumber: ()=>{
+            let element = getID('rdInvalidNumber');
+            return element;
         },
         district: ()=>{
-            let rdDistrict = getID('rdDistrict');
-            return rdDistrict;
+            let element = getID('rdDistrict');
+            return element;
         },
-        divDistrict: ()=>{
-            let rdDivDistrict = getID('rdDistrictDiv');
-            return rdDivDistrict;
+        invalidDistrict: ()=>{
+            let element = getID('rdInvalidDistrict');
+            return element;
         },
         city: ()=>{
-            let rdCity = getID('rdCity');
-            return rdCity;
+            let element = getID('rdCity');
+            return element;
         },
-        divCity: ()=>{
-            let rdDivCity = getID('rdCityDiv');
-            return rdDivCity;
+        invalidCity: ()=>{
+            let element = getID('rdInvalidCity');
+            return element;
         },
         state: ()=>{
-            let rdState = getID('rdState');
-            return rdState;
+            let element = getID('rdState');
+            return element;
         },
-        divState: ()=>{
-            let rdDivState = getID('rdStateDiv');
-            return rdDivState; 
+        invalidState: ()=>{
+            let element = getID('rdInvalidState');
+            return element; 
         },
         postalCode: ()=>{
-            let rdPostalCode = getID('rdPostalCode');
-            return rdPostalCode;
+            let element = getID('rdPostalCode');
+            return element;
         },
-        divPostalCode: ()=>{
-            let rdDivPostalCode = getID('rdPostalCodeDiv');
-            return rdDivPostalCode;
+        invalidPostalCode: ()=>{
+            let element = getID('rdInvalidPostalCode');
+            return element;
         }
     }
 
@@ -271,9 +271,49 @@ app.onload = ()=>{
             let dateTarget = getID('dateTarget');
             return dateTarget;
         },
-        documentDiv: ()=>{
-            let documentDiv = getID('toPrint');
-            return documentDiv;
+        doc2Name: ()=>{
+            let element = getID('doc2NameTarget');
+            return element;
+        },
+        doc2Document: ()=>{
+            let element = getID('doc2DocumentTarget');
+            return element;
+        },
+        doc2Street: ()=>{
+            let element = getID('doc2StreetTarget');
+            return element;
+        },
+        doc2Number: ()=>{
+            let element = getID('doc2NumberTarget');
+            return element;
+        },
+        doc2District: ()=>{
+            let element = getID('doc2DistrictTarget');
+            return element;
+        },
+        doc2CityState: ()=>{
+            let element = getID('doc2CityStateTarget');
+            return element;
+        },
+        doc2PostalCode: ()=>{
+            let element = getID('doc2PostalCodeTarget');
+            return element;
+        },
+        doc2Phone: ()=>{
+            let element = getID('doc2PhoneTarget');
+            return element;
+        },
+        doc2Email: ()=>{
+            let element = getID('doc2EmailTarget');
+            return element;
+        },
+        doc2Date: ()=>{
+            let element = getID('doc2DateTarget');
+            return element;
+        },
+        doc2Signer: ()=>{
+            let element = getID('doc2SignerTarget');
+            return element;
         }
     }
 
@@ -282,303 +322,234 @@ app.onload = ()=>{
 
         // NOME
         let rName = requester.name();
-        let rDivName = requester.divName();
+        let rInvalidName = requester.invalidName();
         if (rName.value !== ''){
-            rDivName.classList.remove('is-invalid');
-            rName.classList.remove('is-invalid');
-            console.log(rName.value);
+            rInvalidName.classList.add('hidden');
         }else {
-            rDivName.classList.add('is-invalid');
-            rName.classList.add('is-invalid');
+            rInvalidName.classList.remove('hidden');
             app.scrollTo(30, 30);
             isValid = false;
         }
         let rdName = requested.name();
-        let rdDivName = requested.divName();
+        let rdInvalidName = requested.invalidName();
         if (rdName.value !== ''){
-            rdDivName.classList.remove('is-invalid');
-            rdName.classList.remove('is-invalid');
-            console.log(rdName.value);
+            rdInvalidName.classList.add('hidden');
         }else {
-            rdDivName.classList.add('is-invalid');
-            rdName.classList.add('is-invalid');
-            app.scrollTo(1400, 1400);
+            rdInvalidName.classList.remove('hidden');
+            app.scrollTo(1800, 1800);
             isValid = false;
         }
 
         // CPF
-        let rCpf = requester.cpf();
-        let rDivCpf = requester.divCpf();
-        if (rCpf.value !== ''){
-            rCpf.classList.remove('is-invalid');
-            rDivCpf.classList.remove('is-invalid');
-            console.log(rCpf.value);
+        let rDocument = requester.document();
+        let rInvalidDocument = requester.invalidDocument();
+        if (rDocument.value !== ''){
+            rInvalidDocument.classList.add('hidden');
         }else {
-            rDivCpf.classList.add('is-invalid');
-            rCpf.classList.add('is-invalid');
+            rInvalidDocument.classList.remove('hidden');
             app.scrollTo(30, 30);
             isValid = false;
         }
-        let rdCpf = requested.cpf();
-        let rdDivCpf = requested.divCpf();
-        if (rdCpf.value !== ''){
-            rdCpf.classList.remove('is-invalid');
-            rdDivCpf.classList.remove('is-invalid');
-            console.log(rCpf.value);
+        let rdDocument = requested.document();
+        let rdInvalidDocument = requested.invalidDocument();
+        if (rdDocument.value !== ''){
+            rdInvalidDocument.classList.add('hidden');
         }else {
-            rdDivCpf.classList.add('is-invalid');
-            rdCpf.classList.add('is-invalid');
-            app.scrollTo(1400, 1400);
+            rdInvalidDocument.classList.remove('hidden');            
+            app.scrollTo(1800, 1800);
             isValid = false;
         }
 
         // EMAIL
         let rEmail = requester.email();
-        let rDivEmail = requester.divEmail();
+        let rInvalidEmail = requester.invalidEmail();
         if (rEmail.value !== ''){
-            rEmail.classList.remove('is-invalid');
-            rDivEmail.classList.remove('is-invalid');
-            console.log(rEmail.value);
+            rInvalidEmail.classList.add('hidden');
         }else {
-            rDivEmail.classList.add('is-invalid');
-            rEmail.classList.add('is-invalid');
+            rInvalidEmail.classList.remove('hidden');
             app.scrollTo(30, 30);
             isValid = false;
         }
         let rdEmail = requested.email();
-        let rdDivEmail = requested.divEmail();
+        let rdInvalidEmail = requested.invalidEmail();
         if (rdEmail.value !== ''){
-            rdEmail.classList.remove('is-invalid');
-            rdDivEmail.classList.remove('is-invalid');
-            console.log(rEmail.value);
+            rdInvalidEmail.classList.add('hidden');
         }else {
-            rdDivEmail.classList.add('is-invalid');
-            rdEmail.classList.add('is-invalid');
-            app.scrollTo(1400, 1400);
+            rdInvalidEmail.classList.remove('hidden');
+            app.scrollTo(1800, 1800);
             isValid = false;
         }
 
         // TELEFONE
         let rPhone = requester.phone();
-        let rDivPhone = requester.divPhone();
+        let rInvalidPhone = requester.invalidPhone();
         if (rPhone.value !== ''){
-            rPhone.classList.remove('is-invalid');
-            rDivPhone.classList.remove('is-invalid');
-            console.log(rPhone.value);
+            rInvalidPhone.classList.add('hidden');
         }else {
-            rDivPhone.classList.add('is-invalid');
-            rPhone.classList.add('is-invalid');
-            app.scrollTo(180, 180);
+            rInvalidPhone.classList.remove('hidden');
+            app.scrollTo(30, 30);
             isValid = false;
         }
         let rdPhone = requested.phone();
-        let rdDivPhone = requested.divPhone();
+        let rdInvalidPhone = requested.invalidPhone();
         if (rdPhone.value !== ''){
-            rdPhone.classList.remove('is-invalid');
-            rdDivPhone.classList.remove('is-invalid');
-            console.log(rdPhone.value);
+            rdInvalidPhone.classList.add('hidden');
         }else {
-            rdDivPhone.classList.add('is-invalid');
-            rdPhone.classList.add('is-invalid');
-            app.scrollTo(1400, 1400);
+            rdInvalidPhone.classList.remove('hidden');
+            app.scrollTo(1800, 1800);
             isValid = false;
         }
 
         //RUA
         let rStreet = requester.street();
-        let rDivStreet = requester.divStreet();
+        let rInvalidStreet = requester.invalidStreet();
         if (rStreet.value !== ''){
-            rStreet.classList.remove('is-invalid');
-            rDivStreet.classList.remove('is-invalid');
-            console.log(rStreet.value);
+            rInvalidStreet.classList.add('hidden');
         }else {
-            rDivStreet.classList.add('is-invalid');
-            rStreet.classList.add('is-invalid');
-            app.scrollTo(750, 750);
+            rInvalidStreet.classList.remove('hidden');
+            app.scrollTo(550, 550);
             isValid = false;
         }
         let rdStreet = requested.street();
-        let rdDivStreet = requested.divStreet();
+        let rdInvalidStreet = requested.invalidStreet();
         if (rdStreet.value !== ''){
-            rdStreet.classList.remove('is-invalid');
-            rdDivStreet.classList.remove('is-invalid');
-            console.log(rdStreet.value);
+            rdInvalidStreet.classList.add('hidden');
         }else {
-            rdDivStreet.classList.add('is-invalid');
-            rdStreet.classList.add('is-invalid');
-            app.scrollTo(1900, 1900);
+            rdInvalidStreet.classList.remove('hidden');
+            app.scrollTo(2350, 2350);
             isValid = false;
         }
 
         // NUMERO
         let rNumber = requester.number();
-        let rDivNumber = requester.divNumber();
+        let rInvalidNumber = requester.invalidNumber();
         if (rNumber.value !== ''){
-            rNumber.classList.remove('is-invalid');
-            rDivNumber.classList.remove('is-invalid');
-            console.log(rNumber.value);
+            rInvalidNumber.classList.add('hidden');
         }else {
-            rDivNumber.classList.add('is-invalid');
-            rNumber.classList.add('is-invalid');
-            app.scrollTo(750, 750);
+            rInvalidNumber.classList.remove('hidden');
+            app.scrollTo(550, 550);
             isValid = false;
         }
         let rdNumber = requested.number();
-        let rdDivNumber = requested.divNumber();
+        let rdInvalidNumber = requested.invalidNumber();
         if (rdNumber.value !== ''){
-            rdNumber.classList.remove('is-invalid');
-            rdDivNumber.classList.remove('is-invalid');
-            console.log(rdNumber.value);
+            rdInvalidNumber.classList.add('hidden');
         }else {
-            rdDivNumber.classList.add('is-invalid');
-            rdNumber.classList.add('is-invalid');
-            app.scrollTo(1900, 1900);
+            rdInvalidNumber.classList.remove('hidden');
+            app.scrollTo(2350, 2350);
             isValid = false;
         }
 
         // BAIRRO
         let rDistrict = requester.district();
-        let rDivDistrict = requester.divDistrict();
+        let rInvalidDistrict = requester.invalidDistrict();
         if (rDistrict.value !== ''){
-            rDistrict.classList.remove('is-invalid');
-            rDivDistrict.classList.remove('is-invalid');
-            console.log(rDistrict.value);
+            rInvalidDistrict.classList.add('hidden');
         }else {
-            rDivDistrict.classList.add('is-invalid');
-            rDistrict.classList.add('is-invalid');
-            app.scrollTo(750, 750);
+            rInvalidDistrict.classList.remove('hidden');
+            app.scrollTo(550, 550);
             isValid = false;
         }
         let rdDistrict = requested.district();
-        let rdDivDistrict = requested.divDistrict();
+        let rdInvalidDistrict = requested.invalidDistrict();
         if (rdDistrict.value !== ''){
-            rdDistrict.classList.remove('is-invalid');
-            rdDivDistrict.classList.remove('is-invalid');
-            console.log(rdDistrict.value);
+            rdInvalidDistrict.classList.add('hidden');
         }else {
-            rdDivDistrict.classList.add('is-invalid');
-            rdDistrict.classList.add('is-invalid');
-            app.scrollTo(1900, 1900);
+            rdInvalidDistrict.classList.remove('hidden');
+            app.scrollTo(2350, 2350);
             isValid = false;
         }
 
         // CIDADE
         let rCity = requester.city();
-        let rDivCity = requester.divCity();
+        let rInvalidCity = requester.invalidCity();
         if (rCity.value !== ''){
-            rCity.classList.remove('is-invalid');
-            rDivCity.classList.remove('is-invalid');
-            console.log(rCity.value);
+            rInvalidCity.classList.add('hidden');
         }else {
-            rDivCity.classList.add('is-invalid');
-            rCity.classList.add('is-invalid');
-            app.scrollTo(750, 750);
+            rInvalidCity.classList.remove('hidden');
+            app.scrollTo(850, 850);
             isValid = false;
         }
         let rdCity = requested.city();
-        let rdDivCity = requested.divCity();
+        let rdInvalidCity = requested.invalidCity();
         if (rdCity.value !== ''){
-            rdCity.classList.remove('is-invalid');
-            rdDivCity.classList.remove('is-invalid');
-            console.log(rdCity.value);
+            rdInvalidCity.classList.add('hidden');
         }else {
-            rdDivCity.classList.add('is-invalid');
-            rdCity.classList.add('is-invalid');
-            app.scrollTo(1900, 1900);
+            rdInvalidCity.classList.remove('hidden');
+            app.scrollTo(2350, 2350);
             isValid = false;
         }
 
         // ESTADO
         let rState = requester.state();
-        let rDivState = requester.divState();
+        let rInvalidState = requester.invalidState();
         if (rState.value !== '0'){
-            rState.classList.remove('is-invalid');
-            rDivState.classList.remove('is-invalid');
-            console.log(rState.value);
+            rInvalidState.classList.add('hidden');
         }else {
-            rDivState.classList.add('is-invalid');
-            rState.classList.add('is-invalid');
-            app.scrollTo(700, 700);
+            rInvalidState.classList.remove('hidden');
+            app.scrollTo(850, 850);
             isValid = false;
         }
         let rdState = requested.state();
-        let rdDivState = requested.divState();
+        let rdInvalidState = requested.invalidState();
         if (rdState.value !== '0'){
-            rdState.classList.remove('is-invalid');
-            rdDivState.classList.remove('is-invalid');
-            console.log(rdState.value);
+            rdInvalidState.classList.add('hidden');
         }else {
-            rdDivState.classList.add('is-invalid');
-            rdState.classList.add('is-invalid');
-            app.scrollTo(2500, 2500);
+            rdInvalidState.classList.remove('hidden');
+            app.scrollTo(2350, 2350);
             isValid = false;
         }
 
         // CEP
         let rPostalCode = requester.postalCode();
-        let rDivPostalCode = requester.divPostalCode();
+        let rInvalidPostalCode = requester.invalidPostalCode();
         if (rPostalCode.value !== ''){
-            rPostalCode.classList.remove('is-invalid');
-            rDivPostalCode.classList.remove('is-invalid');
-            console.log(rPostalCode.value);
+            rInvalidPostalCode.classList.add('hidden');
         }else {
-            rDivPostalCode.classList.add('is-invalid');
-            rPostalCode.classList.add('is-invalid');
-            app.scrollTo(750, 750);
+            rInvalidPostalCode.classList.remove('hidden');
+            app.scrollTo(850, 850);
             isValid = false;
         }
         let rdPostalCode = requested.postalCode();
-        let rdDivPostalCode = requested.divPostalCode();
+        let rdInvalidPostalCode = requested.invalidPostalCode();
         if (rdPostalCode.value !== ''){
-            rdPostalCode.classList.remove('is-invalid');
-            rdDivPostalCode.classList.remove('is-invalid');
-            console.log(rdPostalCode.value);
+            rdInvalidPostalCode.classList.add('hidden');
         }else {
-            rdDivPostalCode.classList.add('is-invalid');
-            rdPostalCode.classList.add('is-invalid');
-            app.scrollTo(2200, 2200);
+            rdInvalidPostalCode.classList.remove('hidden');
+            app.scrollTo(2350, 2350);
             isValid = false;
         }
 
         // RELATO DO CASO
         let report = requester.report();
-        let divReport = requester.divReport();
+        let invalidReport = requester.invalidReport();
         if (report.value !== ''){
-            report.classList.remove('is-invalid');
-            divReport.classList.remove('is-invalid');
-            console.log(report.value);
+            invalidReport.classList.add('hidden');
         }else {
-            divReport.classList.add('is-invalid');
-            report.classList.add('is-invalid');
+            invalidReport.classList.remove('hidden');
             app.scrollTo(900, 900);
             isValid = false;
         }
 
         // DOS PEDIDOS
         let request = requester.request();
-        let divRequest = requester.divRequest();
+        let invalidRequest = requester.invalidRequest();
         if (request.value !== ''){
-            request.classList.remove('is-invalid');
-            divRequest.classList.remove('is-invalid');
-            console.log(request.value);
+            invalidRequest.classList.add('hidden');
         }else {
-            divRequest.classList.add('is-invalid');
-            request.classList.add('is-invalid');
-            app.scrollTo(1100, 1100);
+            invalidRequest.classList.remove('hidden');
+            app.scrollTo(1300, 1300);
             isValid = false;
         }
 
         // VALOR DA CAUSA
         let value = requester.value();
-        let divValue = requester.divValue();
+        let invalidValue = requester.invalidValue();
         if (value.value !== ''){
-            value.classList.remove('is-invalid');
-            divValue.classList.remove('is-invalid');
-            console.log(value.value);
+            invalidValue.classList.add('hidden');
         }else {
-            divValue.classList.add('is-invalid');
-            value.classList.add('is-invalid');
-            app.scrollTo(1200, 1200);
+            invalidValue.classList.remove('hidden');
+            app.scrollTo(1500, 1500);
             isValid = false;
         }
         return isValid;
@@ -604,7 +575,7 @@ app.onload = ()=>{
             requesterAddressTarget.innerText = requesterAddress;
 
             // CPF/CNPJ
-            let requesterDocument = requester.cpf().value;
+            let requesterDocument = requester.document().value;
             let requesterDocumentTarget = targets.requesterDocument();
             requesterDocumentTarget.innerText = requesterDocument;
 
@@ -634,7 +605,7 @@ app.onload = ()=>{
             requiredAddressTarget.innerText = requiredAddress;
 
             // CPF/CNPJ
-            let requiredDocument = requested.cpf().value;
+            let requiredDocument = requested.document().value;
             let requiredDocumentTarget = targets.requiredDocument();
             requiredDocumentTarget.innerText = requiredDocument;
 
@@ -667,6 +638,9 @@ app.onload = ()=>{
             let date = new Date();
             let day = date.getDate();
             let month = date.getMonth();
+            let year = date.getFullYear();
+            let min = date.getMinutes();
+            let hours = date.getHours();
             let months = [
                 'Janeiro',
                 'Fevereiro',
@@ -682,34 +656,93 @@ app.onload = ()=>{
                 'Dezembro'
             ];
             let monthName = months[month];
+            let formatedMonth = month < 10 ? '0' + month : month;
             let formatedDay = day < 10 ? '0' + day : day;
-            let year = date.getFullYear();
+            let todayDate = formatedDay+'/'+formatedMonth+'/'+year;
             let today = `Itapoá (SC), ${formatedDay} de ${monthName} de ${year}.`;
             let dateTarget = targets.dateTarget();
             dateTarget.innerText = today;
 
+            let headerDateTarget = getID('headerDateTarget');
+            let doc2HeaderDateTarget = getID('doc2HeaderDateTarget');
+            headerDateTarget.innerText = todayDate;
+            doc2HeaderDateTarget.innerText = todayDate;
+
+            let headerTimeTarget = getID('headerTimeTarget');
+            let doc2HeaderTimeTarget = getID('doc2HeaderTimeTarget');
+            let correctHours = hours < 10 ? '0' + hours : hours;
+            let correctMin = min < 10 ? '0' + min : min;
+            let now = correctHours+':'+correctMin;
+            headerTimeTarget.innerText = now;
+            doc2HeaderTimeTarget.innerText = now;
+
             // ASSINANTE
             let signerName = requester.name().value;
-            let signerDocument = 'CPF/CNPJ: ' +  requester.cpf().value;
+            let signerDocument = 'CPF/CNPJ: ' +  requester.document().value;
             let signerNameTarget = targets.signerName();
             let signerDocumentTarget = targets.signerDocument();
 
             signerNameTarget.innerText = signerName.toUpperCase();
             signerDocumentTarget.innerText = signerDocument;
 
+            // TERMO DE ADESÃO
+            let termName = requester.name().value;
+            let termDoc = requester.document().value;
+            let termStreet = requester.street().value;
+            let termNumber = requester.number().value;
+            let termDistrict = requester.district().value;
+            let termCity = requester.city().value;
+            let termState = requester.state().value;
+            let termCityState = termCity + '/' + termState;
+            let termPostalCode = requester.postalCode().value;
+            let termPhone = requester.phone().value;
+            let termEmail = requester.email().value;
+
+            let termNameTarget = targets.doc2Name();
+            let termDocTarget = targets.doc2Document();
+            let termStreetTarget = targets.doc2Street();
+            let termNumberTarget = targets.doc2Number();
+            let termDistrictTarget = targets.doc2District();
+            let termCityStateTarget = targets.doc2CityState();
+            let termPostalCodeTarget = targets.doc2PostalCode();
+            let termPhoneTarget = targets.doc2Phone();
+            let termEmailTarget = targets.doc2Email();
+            let termDateTarget = targets.doc2Date();
+            let termSignerTarget = targets.doc2Signer();
+
+            termNameTarget.innerText = termName.toUpperCase();
+            termDocTarget.innerText = termDoc;
+            termStreetTarget.innerText = termStreet.toUpperCase();
+            termNumberTarget.innerText = termNumber;
+            termDistrictTarget.innerText = termDistrict.toUpperCase();
+            termCityStateTarget.innerText = termCityState.toUpperCase();
+            termPostalCodeTarget.innerText = termPostalCode;
+            termPhoneTarget.innerText = termPhone;
+            termEmailTarget.innerText = termEmail;
+            termDateTarget.innerText = today;
+            termSignerTarget.innerText = termName.toUpperCase();
+            printBtn.style.display = 'block';
+
             alert('Seu documento foi gerado com sucesso. Clique em imprimir para realizar o download!');
-            initialPrintBtn.classList.remove('visually-hidden');
         }
     }
-    const initialPrintBtn = getID('printBtn');
-    const printBtn = getID('continuePrint');
-    const header = getID('header');
-    const form = getID('form');
+    
+    const printBtn = getID('printBtn');
+    const pageBody = getID('body');
+    const pageHeader = getID('header');
+    const doc1 = getID('doc1');
+    const doc2 = getID('doc2');
     printBtn.onclick = ()=>{
-        
-        header.classList.add('visually-hidden');
-        form.classList.add('visually-hidden');
-        initialPrintBtn.classList.add('visually-hidden');
+        doc1.style.display = 'flex';
+        doc2.style.display = 'flex';
+        pageBody.style.display = 'none';
+        pageHeader.style.display = 'none';
         print();
+    }
+    
+    const cleanBtn = getID('cleanBtn');
+    cleanBtn.onclick = ()=>{
+        doc1.style.display = 'flex';
+        doc2.style.display = 'flex';
     }
 };
