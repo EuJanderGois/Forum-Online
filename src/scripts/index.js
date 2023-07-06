@@ -1,5 +1,6 @@
 
 
+
 const app = window;
 
 app.onload = ()=>{
@@ -108,12 +109,28 @@ app.onload = ()=>{
             let element = getID('invalidRequest');
             return element;
         },
-        value: ()=>{
-            let element = getID('value');
+        valueOne: ()=>{
+            let element = getID('valueOne');
             return element;
         },
-        invalidValue: ()=>{
-            let element = getID('invalidValue');
+        valueTwo: ()=>{
+            let element = getID('valueTwo');
+            return element;
+        },
+        valueTree: ()=>{
+            let element = getID('valueTree');
+            return element;
+        },
+        invalidValueOne: ()=>{
+            let element = getID('invalidValueOne');
+            return element;
+        },
+        invalidValueTwo: ()=>{
+            let element = getID('invalidValueTwo');
+            return element;
+        },
+        invalidValueTree: ()=>{
+            let element = getID('invalidValueTree');
             return element;
         }
     }
@@ -254,6 +271,18 @@ app.onload = ()=>{
             let requestsTarget = getID('requestsTarget');
             return requestsTarget;
             // append <li> tag
+        },
+        firstValueTarget: ()=>{
+            let target = getID('firstValue');
+            return target;
+        },
+        secondValueTarget: ()=>{
+            let target = getID('secondValue');
+            return target;
+        },
+        thirdValueTarget: ()=>{
+            let target = getID('thirdValue');
+            return target;
         },
         valueTarget: ()=>{
             let valueTarget = getID('valueTarget');
@@ -543,12 +572,13 @@ app.onload = ()=>{
         }
 
         // VALOR DA CAUSA
-        let value = requester.value();
-        let invalidValue = requester.invalidValue();
-        if (value.value !== ''){
-            invalidValue.classList.add('hidden');
+        let valueTree = requester.valueTree();
+        let invalidValueTree = requester.invalidValueTree();
+        let x = valueTree.value.replace(/[^\d]+/g,'');
+        if (!Number.isNaN(parseInt(x)) && parseInt(x) !== 0){
+            invalidValueTree.classList.add('hidden');
         }else {
-            invalidValue.classList.remove('hidden');
+            invalidValueTree.classList.remove('hidden');
             app.scrollTo(1500, 1500);
             isValid = false;
         }
@@ -630,9 +660,17 @@ app.onload = ()=>{
             requestTarget.innerText = request;
 
             // VALOR DA CAUSA
-            let causeValue = requester.value().value;
-            let causeValueTarget = targets.valueTarget();
-            causeValueTarget.innerText = causeValue;
+            let causeValue1 = requester.valueOne().value;
+            let causeValueTarget1 = targets.firstValueTarget();
+            causeValueTarget1.innerText = causeValue1;
+
+            let causeValue2 = requester.valueTwo().value;
+            let causeValueTarget2 = targets.secondValueTarget();
+            causeValueTarget2.innerText = causeValue2;
+
+            let causeValue3 = requester.valueTree().value;
+            let causeValueTarget3 = targets.thirdValueTarget();
+            causeValueTarget3.innerText = causeValue3;
 
             // DATA
             let date = new Date();
@@ -728,21 +766,51 @@ app.onload = ()=>{
     }
     
     const printBtn = getID('printBtn');
-    const pageBody = getID('body');
-    const pageHeader = getID('header');
+    const pageMain = getID('pageMain');
+    const pageFooter = getID('pageFooter');
     const doc1 = getID('doc1');
     const doc2 = getID('doc2');
     printBtn.onclick = ()=>{
         doc1.style.display = 'flex';
         doc2.style.display = 'flex';
-        pageBody.style.display = 'none';
-        pageHeader.style.display = 'none';
+        pageMain.style.display = 'none';
+        pageFooter.style.display = 'none';
         print();
     }
+
+    let value1 = requester.valueOne();
+    let value2 = requester.valueTwo();
+    let value3 = requester.valueTree();
     
-    const cleanBtn = getID('cleanBtn');
-    cleanBtn.onclick = ()=>{
-        doc1.style.display = 'flex';
-        doc2.style.display = 'flex';
+    value1.addEventListener("input", ()=>{
+        let formated1 = value1.value.replace(/[^\d]+/g,'');
+        let formated2 = value2.value.replace(/[^\d]+/g,'');
+        if (Number.isNaN(parseInt(formated2)) || parseInt(formated2) == 0){
+            value3.value = currency(formated1);
+        } else {
+            if (Number.isNaN(parseInt(formated1)) || parseInt(formated1) == 0){
+                value3.value = currency(formated2);
+            } else {
+                value3.value = currency(parseInt(value1.value) + parseInt(value2.value))
+            }
+        }
+    });
+    value2.addEventListener("input", ()=>{
+        let formated1 = value1.value.replace(/[^\d]+/g,'');
+        let formated2 = value2.value.replace(/[^\d]+/g,'');
+        if (Number.isNaN(parseInt(formated1)) || parseInt(formated1) == 0){
+            value3.value = currency(formated2);
+        } else {
+            if (Number.isNaN(parseInt(formated2)) || parseInt(formated2) == 0){
+                value3.value = currency(formated1);
+            } else {
+                value3.value = currency(parseInt(value1.value) + parseInt(value2.value))
+            }
+        }
+    });
+    function currency(props){
+        let result = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props);
+        return result;
     }
+    
 };

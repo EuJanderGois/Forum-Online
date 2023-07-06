@@ -1,21 +1,23 @@
 const { watch } = require('fs');
 const path = require('path');
 
-module.exports = {
-  entry: './src/index.js',
-
-  output: {
-    path: path.resolve('dist'),
-    filename: 'bundle.js'
+module.exports = [
+  {
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'test.bundle.js'
+    },
+    name: 'test',
+    entry: './src/scripts/test.js',
+    mode: 'development'
   },
-  mode: 'development',
-  devServer: {
-    port: 33000,
-    hot: true,
-    static: {
-        directory: path.resolve(__dirname),
-        publicPath: '/',
-        watch: true
-    }
+  {
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'index.bundle.js'
+    },
+    name: 'index',
+    entry: './src/scripts/index.js',
+    mode: 'development'
   }
-};
+];

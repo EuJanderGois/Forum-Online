@@ -1,0 +1,196 @@
+#doc1,
+#doc2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    page-break-after: always;
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: none;
+}
+#toPrint {
+    width: 100%;
+}
+.generated {
+    width: 100%;
+}
+.generated-text {
+    font-size: .8rem;
+}
+.doc-header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.doc-header-text {
+    width: 100%;
+    padding: 1em;
+}
+.doc-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.doc-title-2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.doc-header-address {
+    font-size: .8rem;
+    padding: 1em 0;
+    width: 50%;
+}
+.doc-header-free {
+    width: 100%;
+    text-align: end;
+}
+
+.doc-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em 5%;
+}
+.doc-section-title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #808080;
+    border: 1px solid #000000;
+}
+.doc-info-box {
+    width: 100%;
+    padding: 1em;
+}
+.doc-name-box {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .2em 0;
+}
+.doc-name {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: .2em;
+}
+.doc-section-inside {
+    width: 100%;
+    margin: 1em 0;
+}
+.doc-name-content {
+    width: 100%;
+    font-size: .9em;
+}
+.doc-text-box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: .2em 0;
+    margin-top: 3rem;
+}
+.doc-text-name {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0 1em;
+    font-weight: 600;
+}
+.doc-text {
+    width: 100%;
+    font-size: .9rem;
+    padding: 1em;
+}
+.doc-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#dateTarget {
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+}
+.doc-signer-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+}
+#signerNameTarget,
+#signerDocument {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.doc2-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+}
+.doc2-header-address-box {
+    width: 60%;
+    padding: 1em 0;
+}
+.doc2-header-address {
+    font-size: .9rem;
+}
+.doc2-title {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+}
+.doc2-title2 {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: start;
+    padding: .5em;
+}
+.doc2-body {
+    width: 100%;
+    padding: 1em;
+}
+.doc2-content {
+    width: 100%;
+    padding: .5em;
+    font-size: .9rem;
+}
+.list {
+    list-style: upper-roman inside;
+}
+.doc2-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#doc2DateTarget {
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+    padding: 1em 0;
+}
+#doc2SignerTarget {
+    width: fit-content;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 500;
+    padding: 2em;
+}

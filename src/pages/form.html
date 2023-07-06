@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJSC - Formulário</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/docs.css">
+</head>
+<body>
+    <main class="container-main" id="pageMain" style="display: flex;">
+        <nav class="navbar">
+            <div class="image-container">
+                <img src="../../images/tjsc.png" width="115" height="87" alt="">
+            </div>
+        </nav>
+        
+        <!-- DADOS DO RECLAMANTE -->
+        <div class="info-container">
+            <h1 class="title">
+                Dados do reclamante
+            </h1>
+            <div class="section">
+                <div class="input-group">
+                    <div class="input-box" id="rNameDiv">
+                        <label class="input-placeholder">
+                            Nome
+                        </label>
+                        <input class="form-input" type="text" id="rName">
+                    </div>
+                    <span class="warn hidden" id="rInvalidName">
+                        É necessário informar o nome!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rDocDiv">
+                        <label class="input-placeholder">
+                            CPF/CNPJ
+                        </label>
+                        <input class="form-input" type="text" id="rDoc">
+                    </div>
+                    <span class="warn hidden" id="rInvalidDocument">
+                        É necessário informar o documento!
+                    </span>
+                </div>
+            
+            
+                <div class="input-group">
+                    <div class="input-box" id="rEmailDiv">
+                        <label class="input-placeholder">
+                            Email
+                        </label>
+                        <input class="form-input" type="text" id="rEmail">
+                    </div>
+                    <span class="warn hidden" id="rInvalidEmail">
+                        É necessário informar o email!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rPhoneDiv">
+                        <label class="input-placeholder">
+                            Telefone
+                        </label>
+                        <input class="form-input" type="text" id="rPhone">
+                    </div>
+                    <span class="warn hidden" id="rInvalidPhone">
+                        É necessário informar o telefone!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- ENDEREÇO DO RECLAMANTE -->
+        <div class="info-container">
+            <h1 class="title">
+                Endereço do reclamante
+            </h1>
+            <div class="section">
+                <div class="input-group">
+                    <div class="input-box" id="rStreetDiv">                            
+                        <label class="input-placeholder">
+                            Rua
+                        </label>
+                        <input class="form-input" type="text" id="rStreet">
+                    </div>
+                    <span class="warn hidden" id="rInvalidStreet">
+                        É necessário informar a rua!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rNumberDiv">
+                        <label class="input-placeholder">
+                            Número
+                        </label>
+                        <input class="form-input" type="number"id="rNumber">
+                    </div>
+                    <span class="warn hidden" id="rInvalidNumber">
+                        É necessário informar o número (informe 0 caso não possua número)!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box" id="rDistrictDiv">
+                        <label class="input-placeholder">
+                            Bairro
+                        </label>
+                        <input class="form-input" type="text" id="rDistrict">
+                    </div>
+                    <span class="warn hidden" id="rInvalidDistrict">
+                        É necessário informar o bairro!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box" id="rCityDiv">
+                        <label class="input-placeholder">
+                            Cidade
+                        </label>
+                        <input class="form-input" type="text" id="rCity">
+                    </div>
+                    <span class="warn hidden" id="rInvalidCity">
+                        É necessário informar a cidade!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="form-floating" id="rStateDiv">
+                        <select name="" id="rState" class="form-select">
+                            <option value="0">Selecione o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <span class="warn hidden" id="rInvalidState">
+                        É necessário informar o estado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rPostalCodeDiv">
+                        <label class="input-placeholder">
+                            CEP
+                        </label>
+                        <input class="form-input" type="text" id="rPostalCode">
+                    </div>
+                    <span class="warn hidden" id="rInvalidPostalCode">
+                        É necessário informar o CEP!
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <h1 class="title">
+                Breve Relato do Caso
+            </h1>
+            <div class="section">
+                <div class="input-group">
+                    <div class="input-box" id="divReportCase">
+                        <label class="input-placeholder">
+                            Breve relato do caso
+                        </label>
+                        <textarea class="form-input" style="height: 250px;" id="reportCase"></textarea>
+                    </div>
+                    <span class="warn hidden" id="invalidReport">
+                        É necessário relatar o caso!
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <h1 class="title">
+                Solicitação
+            </h1>
+            <div class="section">
+                <div class="input-group">
+                    <div class="input-box" id="divRequest">
+                        <label class="input-placeholder">
+                            Descreva sua solicitação
+                        </label>
+                        <textarea class="form-input" style="height: 250px;" id="request"></textarea>
+                    </div>
+                    <span class="warn hidden" id="invalidRequest">
+                        É necessário informar qual a solicitação!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="info-container">
+            <h1 class="title">
+                Valor da causa
+            </h1>
+            <div class="section">
+                <div class="input-group">
+                    <div class="input-box" id="divValueOne">
+                        <label class="input-placeholder">
+                            Condenação à título de dano moral (somente números)
+                        </label>
+                        <input type="number" class="form-input" id="valueOne"></input>
+                    </div>
+                    <span class="warn hidden" id="invalidValueOne"></span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="divValueTwo">
+                        <label class="input-placeholder">
+                            Condenação à título de dano material (somente números)
+                        </label>
+                        <input type="number" class="form-input" id="valueTwo"></input>
+                    </div>
+                    <span class="warn hidden" id="invalidValueTwo"></span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="divValueTree">
+                        <label class="input-placeholder">
+                            Valor total da causa (preenchimento automático)
+                        </label>
+                        <input class="form-input" id="valueTree" disabled></input>
+                    </div>
+                    <span class="warn hidden" id="invalidValueTree">
+                        É necessário ter ao menos um campo preenchido!
+                    </span>
+                </div>
+            </div>
+        </div>    
+        <div class="info-container">
+            <h1 class="title">
+                Dados do Reclamado
+            </h1>
+            <div class="section">
+                <div class="input-group">
+                    <div class="input-box" id="rdNameDiv">
+                        <label class="input-placeholder">
+                            Nome
+                        </label>
+                        <input class="form-input" type="text" id="rdName">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidName">
+                        É necessário informar o nome do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rdDocDiv">
+                        <label class="input-placeholder">
+                            CPF/CNPJ
+                        </label>
+                        <input class="form-input" type="text" id="rdDoc">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidDocument">
+                        É necessário informar o documento do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rdEmailDiv">
+                        <label class="input-placeholder">
+                            Email
+                        </label>
+                        <input class="form-input" type="text" id="rdEmail">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidEmail">
+                        É necessário informar o email do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rdPhoneDiv">
+                        <label class="input-placeholder">
+                            Telefone
+                        </label>
+                        <input class="form-input" type="text" id="rdPhone">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidPhone">
+                        É necessário informar o telefone do reclamado!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="info-container">
+            <h1 class="title">
+                Endereço do Reclamado
+            </h1>
+            <div class="section">
+                <div class="input-group">
+                    <div class="input-box" id="rdStreetDiv">                            
+                        <label class="input-placeholder">
+                            Rua
+                        </label>
+                        <input class="form-input" type="text" id="rdStreet">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidStreet">
+                        É necessário informar a rua do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rdNumberDiv">
+                        <label class="input-placeholder">
+                            Número
+                        </label>
+                        <input class="form-input" type="number"id="rdNumber">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidNumber">
+                        É necessário informar um número (informe 0 caso não possua número)!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box" id="rdDistrictDiv">
+                        <label class="input-placeholder">
+                            Bairro
+                        </label>
+                        <input class="form-input" type="text" id="rdDistrict">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidDistrict">
+                        É necessário informar o bairro do reclamado!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box" id="rdCityDiv">
+                        <label class="input-placeholder">
+                            Cidade
+                        </label>
+                        <input class="form-input" type="text" id="rdCity">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidCity">
+                        É necessário informar a cidade do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="form-floating" id="rdStateDiv">
+                        <select name="" id="rdState" class="form-select">
+                            <option value="0">Selecione o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <span class="warn hidden" id="rdInvalidState">
+                        É necessário informar o estado do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box" id="rdPostalCodeDiv">
+                        <label class="input-placeholder">
+                            CEP
+                        </label>
+                        <input class="form-input" type="text" id="rdPostalCode">
+                    </div>
+                    <span class="warn hidden" id="rdInvalidPostalCode">
+                        É necessário informar o CEP do reclamado!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <a class="btn"  id="sendBtn">Enviar dados</a>
+            <a class="btn btn-confirm hidden" id="printBtn">Imprimir</a>
+        </div>
+    </main>
+
+    <!-- INICIO DO DOCUMENTO 1 -->
+    <div id="doc1" style="display: none;">
+        <div id="toPrint">
+            <div class="generated">
+                <p class="generated-text">
+                    documento gerado às <strong id="headerTimeTarget"></strong>
+                        do dia <strong id="headerDateTarget"></strong>
+                </p>
+            </div>
+            <section class="doc-header">
+                <div class="doc-image-box">
+                    <img src="../../images/image.svg" alt="">
+                </div>
+                <div class="doc-header-text">
+                    <h1 class="doc-title">
+                        PODER JUDICIÁRIO DE SANTA CATARINA
+                    </h1>
+                    <h1 class="doc-title-2">
+                        Comarca de Itapoá 1ª Vara
+                    </h1>
+                    <p class="doc-header-address">
+                        Rua Mariana Michels Borges, 776 - Bairro: Itapema do Norte - CEP: 89249-000 - Fone: (47)3443-8000 - Email:
+                        itapoa.vara1@tjsc.jus.br
+                    </p>
+                    <p class="doc-header-free">
+                        Justiça Gratuita
+                    </p>
+                </div>
+            </section>
+            <section class="doc-section">
+                <div class="doc-section-title-box">
+                    <h1 class="doc-title-2">
+                        RECLAMAÇÃO DE JUIZADO ESPECIAL CÍVEL
+                    </h1>
+                </div>
+                <div class="doc-info-box">
+                    <div class="doc-section-inside">
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Ação:
+                            </h2>
+                            <p class="doc-name-content">
+                                Procedimento do Juizado Especial Cível/PROC
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Reclamante(s):
+                            </h2>
+                            <p class="doc-name-content" id="requesterNameTarget">
+                                
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Endereço:
+                            </h2>
+                            <p class="doc-name-content" id="requesterAddressTarget">
+                                
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                CPF/CNPJ:
+                            </h2>
+                            <p class="doc-name-content" id="requesterDocTarget">
+                                
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Email:
+                            </h2>
+                            <p class="doc-name-content" id="requesterEmailTarget">
+                                
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Whatsapp/Telefone:
+                            </h2>
+                            <p class="doc-name-content" id="requesterPhoneTarget">
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="doc-section-inside">
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Reclamado(s):
+                            </h2>
+                            <p class="doc-name-content" id="requiredNameTarget">
+                                
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Endereço:
+                            </h2>
+                            <p class="doc-name-content" id="requiredAddressTarget">
+                                
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                CPF/CNPJ:
+                            </h2>
+                            <p class="doc-name-content" id="requiredDocTarget">
+                                
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Email:
+                            </h2>
+                            <p class="doc-name-content" id="requiredEmailTarget">
+                                
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Whatsapp/Telefone:
+                            </h2>
+                            <p class="doc-name-content" id="requiredPhoneTarget">
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="doc-text-box">
+                    <h2 class="doc-text-name">
+                        I. Dos fatos (Breve relato sobre o caso)
+                    </h2>
+                    <p class="doc-text" id="reportTarget">
+                        
+                    </p>
+                </div>
+                <div class="doc-text-box">
+                    <h2 class="doc-text-name">
+                        II. Do(s) Pedidos(s)
+                    </h2>
+                    <p class="doc-text" id="requestTextTarget">
+                        
+                    </p>
+                </div>
+                <div class="doc-text-box">
+                    <h2 class="doc-text-name">
+                        III. Valor da causa
+                    </h2>
+                    <p class="doc-text">
+                        Valor do dano moral: <span id="firstValue">R$ 5.000,00</span>
+                    </p>
+                    <p class="doc-text">
+                        Valor do dano material: <span id="secondValue">R$ 5.000,00</span>
+                    </p>
+                    <p class="doc-text" id="valueTarget">
+                        Dá-se a causa o valor total de: <span id="thirdValue">R$ 10.000,00</span>
+                    </p>
+                </div>
+                </div>
+                <div class="doc-footer">
+                    <p id="dateTarget">
+                        
+                    </p>
+                    <div class="doc-signer-box">
+                        <h2 class="" id="signerNameTarget">
+                            
+                        </h2>
+                        <h2 class="" id="signerDocument">
+                            
+                        </h2>
+                    </div>
+                    <div class="">
+                        <h2>
+                            
+                        </h2>
+                        <h2>
+                            
+                        </h2>
+                        <h2>
+                            
+                        </h2>
+                    </div>
+                </div>
+            </section>
+    </div>
+    <!-- FIM DO DOCUMENTO -->
+    
+    <!-- INICIO DO DOCUMENTO 2 -->
+    <div id="doc2" style="display: none;">
+            <div class="generated">
+                <p class="generated-text">
+                    documento gerado às <strong id="doc2HeaderTimeTarget"></strong>
+                        do dia <strong id="doc2HeaderDateTarget"></strong>
+                </p>
+            </div>
+            <div class="doc2-header">
+                <div class="image-box">
+                    <img width="232" height="86" alt="" src="../../images/PJSC-H-Poder Judiciario.png">
+                </div>
+                <div class="doc2-header-address-box">
+                    <p class="doc2-header-address">
+                        Rua Mariana Michels Borges, 776 - Bairro: Itapema do Norte - CEP: 89249-000 - Fone: (47)3443-8000 - Email:
+                        itapoa.vara1@tjsc.jus.br
+                    </p>
+                </div>
+            </div>
+            <h1 class="doc2-title">
+                TERMO DE ADESÃO
+            </h1>
+            <div class="doc2-body">
+                <h3 class="doc2-title2">
+                    Autos n.
+                </h3>
+                <p class="doc2-content">
+                    Classe do Processo PROCEDIMENTO DO JUIZADO ESPECIAL DA FAZENDA PÚBLICA
+                </p>
+                <div>
+                    <p class="doc2-content">
+                        Eu, 
+                        <span id="doc2NameTarget"></span>, CPF: 
+                        <span id="doc2DocumentTarget"></span>, residente e domiciliado rua 
+                        <span id="doc2StreetTarget"></span>
+                        <span id="doc2NumberTarget"></span> - 
+                        <span id="doc2DistrictTarget"></span> – 
+                        <span id="doc2CityStateTarget"></span> – 
+                        <span id="doc2PostalCodeTarget"></span>, adiro voluntariamente à utilização do aplicativo de mensagens Whatsapp para receber intimações decorrentes da tramitação do processo acima informado, enviadas a partir do número telefônico (número do telefone distribuído à Secretaria do Juizado Especial). Para tanto, informo que receberei as intimações no telefone celular número 
+                        <span id="doc2PhoneTarget"></span> ou pelo e-mail 
+                        <span id="doc2EmailTarget"></span> e assumo o compromisso de comunicar imediatamente ao juízo a alteração do número de telefone informado e assinar novo termo de adesão, reputando eficazes as intimações enviadas ao telefone anteriormente cadastrado na ausência de comunicação da mudança.
+                    </p>
+                    <p class="doc2-content">
+                        Por este ato me declaro ciente do inteiro teor da Resolução Conjunta GP/CGJ n. 6 de 5 de outubro de 2017 e afirmo que:
+                    </p>
+                    <ul>
+                        <li class="doc2-content list">
+                            concordo com os termos da Resolução Conjunta GP/CGJ n. 6 de 5 de outubro de 2017 e com a intimação efetuada por meio do aplicativo de mensagens do Whatsapp;
+                        </li>
+                        <li class="doc2-content list">
+                            possuo o aplicativo de mensagens Whatsapp no aparelho de telefone ora informado;
+                        </li>
+                        <li class="doc2-content list">
+                            manterei ativa, na configuração de privacidade do aplicativo de mensagens Whatsapp, a opção recibo/confirmação de leitura;
+                        </li>
+                        <li class="doc2-content list">
+                            fui informado (a) sobre o número de telefone que será utilizado pela secretaria do Juizado Especial para realizar as intimações com a utilização do aplicativo de mensagens Whatsapp;
+                        </li>
+                        <li class="doc2-content list">
+                            fui cientificado (a) de que o Poder Judiciário do Estado de Santa Catarina, em nenhuma hipótese, solicita dados pessoais, bancários ou quaisquer outros de caráter sigiloso, limitando-se à utilização do aplicativo de mensagens Whatsapp para efetuar intimações; e
+                        </li>
+                        <li class="doc2-content list">
+                            Fui cientificado (a) de que as dúvidas referentes à intimação deverão ser tratadas exclusivamente na Secretaria do Juizado Especial na qual tramita o processo referido neste termo.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="doc2-footer">
+                <p id="doc2DateTarget"></p>
+                <h4 id="doc2SignerTarget"></h4>
+            </div>
+    </div>
+    <!-- FIM DO DOCUMENTO -->
+    <footer style="display: flex;" id="pageFooter">
+        <div class="footer-container">
+            <h1 class="footer-title">
+                Poder Judiciário de Santa Catarina
+            </h1>
+            <span class="footer-text">
+                Rua Mariana Michels Borges, 776 - Bairro: Itapema do Norte - CEP: 89249-000 - Fone: (47)3443-8000 - Email: itapoa.vara1@tjsc.jus.br 
+            </span>
+        </div>
+        <div class="footer-container">
+            <h1 class="footer-title">
+                Horário de Funcionamento
+            </h1>
+            <span class="footer-text">
+                Horário regimental de funcionamento – das 12:00 às 19:00
+                Horário de atendimento ao público – das 12:00 às 18:00 
+            </span>
+        </div>
+        <div class="footer-container">
+            <h1 class="footer-title">
+                Outros
+            </h1>
+            <span class="footer-text">
+                <div class="footer-section">
+                    <span>
+                        Emails úteis
+                    </span>
+                </div>
+                <div class="footer-section">
+                    <span>
+                        Telefones úteis
+                    </span>
+                </div>
+            </span>
+        </div>
+    </footer>    
+    <script src="../../src/scripts/index.js" defer></script>
+</body>
+</html>
