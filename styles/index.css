@@ -12,6 +12,10 @@
 html {
     font-family: sans-serif;
 }
+a {
+    text-decoration: none;
+    color: var(--light-color);
+}
 .container-main {
     display: flex;
     justify-content: center;
@@ -132,6 +136,13 @@ html {
     color: var(--bg-color);
     font-size: .95rem;
 }
+.check-box {
+    display: flex;
+    padding: .5em;
+}
+.check {
+    padding: 0 .2em;
+}
 .warn {
     color: #ff0000;
     font-size: .8rem;
@@ -182,6 +193,9 @@ footer {
 .footer-section:hover {
     border-bottom: 1px solid #fff;
     cursor: pointer;
+}
+.after-placeholder {
+    font-size: .7rem;
 }
 
 @media only screen and (max-width: 600px) {

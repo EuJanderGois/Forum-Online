@@ -37,6 +37,7 @@
                     <div class="input-box" id="rDocDiv">
                         <label class="input-placeholder">
                             CPF/CNPJ
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
                         <input class="form-input" type="text" id="rDoc">
                     </div>
@@ -61,8 +62,9 @@
                     <div class="input-box" id="rPhoneDiv">
                         <label class="input-placeholder">
                             Telefone
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input class="form-input" type="text" id="rPhone">
+                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="rPhone">
                     </div>
                     <span class="warn hidden" id="rInvalidPhone">
                         É necessário informar o telefone!
@@ -91,6 +93,7 @@
                     <div class="input-box" id="rNumberDiv">
                         <label class="input-placeholder">
                             Número
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
                         <input class="form-input" type="number"id="rNumber">
                     </div>
@@ -163,8 +166,9 @@
                     <div class="input-box" id="rPostalCodeDiv">
                         <label class="input-placeholder">
                             CEP
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input class="form-input" type="text" id="rPostalCode">
+                        <input data-mask="00000-000" class="form-input" type="text" id="rPostalCode">
                     </div>
                     <span class="warn hidden" id="rInvalidPostalCode">
                         É necessário informar o CEP!
@@ -208,6 +212,17 @@
                         É necessário informar qual a solicitação!
                     </span>
                 </div>
+                <div class="input-group">
+                    <div class="check-box">
+                        <input type="checkbox" id="check"></input>
+                        <label class="input-placeholder check">
+                            Pedido de antecipação de tutela
+                        </label>
+                    </div>
+                    <span class="warn hidden" id="invalidRequest">
+                        
+                    </span>
+                </div>
             </div>
         </div>
         <div class="info-container">
@@ -218,25 +233,28 @@
                 <div class="input-group">
                     <div class="input-box" id="divValueOne">
                         <label class="input-placeholder">
-                            Condenação à título de dano moral (somente números)
+                            Condenação à título de dano moral
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input type="number" class="form-input" id="valueOne"></input>
+                        <input class="form-input" id="valueOne"></input>
                     </div>
                     <span class="warn hidden" id="invalidValueOne"></span>
                 </div>
                 <div class="input-group">
                     <div class="input-box" id="divValueTwo">
                         <label class="input-placeholder">
-                            Condenação à título de dano material (somente números)
+                            Condenação à título de dano material
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input type="number" class="form-input" id="valueTwo"></input>
+                        <input class="form-input" id="valueTwo"></input>
                     </div>
                     <span class="warn hidden" id="invalidValueTwo"></span>
                 </div>
                 <div class="input-group">
                     <div class="input-box" id="divValueTree">
                         <label class="input-placeholder">
-                            Valor total da causa (preenchimento automático)
+                            Valor total da causa
+                            <span class="after-placeholder">(preechimento automático)</span>
                         </label>
                         <input class="form-input" id="valueTree" disabled></input>
                     </div>
@@ -266,6 +284,7 @@
                     <div class="input-box" id="rdDocDiv">
                         <label class="input-placeholder">
                             CPF/CNPJ
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
                         <input class="form-input" type="text" id="rdDoc">
                     </div>
@@ -288,8 +307,9 @@
                     <div class="input-box" id="rdPhoneDiv">
                         <label class="input-placeholder">
                             Telefone
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input class="form-input" type="text" id="rdPhone">
+                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="rdPhone">
                     </div>
                     <span class="warn hidden" id="rdInvalidPhone">
                         É necessário informar o telefone do reclamado!
@@ -317,6 +337,7 @@
                     <div class="input-box" id="rdNumberDiv">
                         <label class="input-placeholder">
                             Número
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
                         <input class="form-input" type="number"id="rdNumber">
                     </div>
@@ -389,8 +410,9 @@
                     <div class="input-box" id="rdPostalCodeDiv">
                         <label class="input-placeholder">
                             CEP
+                            <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input class="form-input" type="text" id="rdPostalCode">
+                        <input data-mask="00000-000" class="form-input" type="text" id="rdPostalCode">
                     </div>
                     <span class="warn hidden" id="rdInvalidPostalCode">
                         É necessário informar o CEP do reclamado!
@@ -447,6 +469,14 @@
                             </h2>
                             <p class="doc-name-content">
                                 Procedimento do Juizado Especial Cível/PROC
+                            </p>
+                        </div>
+                        <div class="doc-name-box">
+                            <h2 class="doc-name">
+                                Pedido de antecipação de tutela:
+                            </h2>
+                            <p class="doc-name-content" id="anticipationTarget">
+                                
                             </p>
                         </div>
                         <div class="doc-name-box">
@@ -689,18 +719,21 @@
             </h1>
             <span class="footer-text">
                 <div class="footer-section">
-                    <span>
+                    <a href="https://app.tjsc.jus.br/tjsc-consulta-email/#/" target="_blank">
                         Emails úteis
-                    </span>
+                    </a>
                 </div>
                 <div class="footer-section">
-                    <span>
+                    <a href="https://www.tjsc.jus.br/enderecos-e-telefones" target="_blank">
                         Telefones úteis
-                    </span>
+                    </a>
                 </div>
             </span>
         </div>
-    </footer>    
+    </footer>   
     <script src="/dist/index.bundle.js" defer></script>
+    <script src="/jQuery/jquery-3.7.0.min.js" defer></script>
+    <script src="/jQuery/jquery.mask.js" defer></script>
+    <script src="/jQuery/jquery.maskMoney.min.js" defer></script>
 </body>
 </html>

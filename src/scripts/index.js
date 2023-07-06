@@ -1,6 +1,3 @@
-
-
-
 const app = window;
 
 app.onload = ()=>{
@@ -365,7 +362,7 @@ app.onload = ()=>{
             rdInvalidName.classList.add('hidden');
         }else {
             rdInvalidName.classList.remove('hidden');
-            app.scrollTo(1800, 1800);
+            app.scrollTo(2200, 2200);
             isValid = false;
         }
 
@@ -385,7 +382,7 @@ app.onload = ()=>{
             rdInvalidDocument.classList.add('hidden');
         }else {
             rdInvalidDocument.classList.remove('hidden');            
-            app.scrollTo(1800, 1800);
+            app.scrollTo(2200, 2200);
             isValid = false;
         }
 
@@ -405,7 +402,7 @@ app.onload = ()=>{
             rdInvalidEmail.classList.add('hidden');
         }else {
             rdInvalidEmail.classList.remove('hidden');
-            app.scrollTo(1800, 1800);
+            app.scrollTo(2250, 2250);
             isValid = false;
         }
 
@@ -425,7 +422,7 @@ app.onload = ()=>{
             rdInvalidPhone.classList.add('hidden');
         }else {
             rdInvalidPhone.classList.remove('hidden');
-            app.scrollTo(1800, 1800);
+            app.scrollTo(2250, 2250);
             isValid = false;
         }
 
@@ -445,7 +442,7 @@ app.onload = ()=>{
             rdInvalidStreet.classList.add('hidden');
         }else {
             rdInvalidStreet.classList.remove('hidden');
-            app.scrollTo(2350, 2350);
+            app.scrollTo(2650, 2650);
             isValid = false;
         }
 
@@ -465,7 +462,7 @@ app.onload = ()=>{
             rdInvalidNumber.classList.add('hidden');
         }else {
             rdInvalidNumber.classList.remove('hidden');
-            app.scrollTo(2350, 2350);
+            app.scrollTo(2650, 2650);
             isValid = false;
         }
 
@@ -485,7 +482,7 @@ app.onload = ()=>{
             rdInvalidDistrict.classList.add('hidden');
         }else {
             rdInvalidDistrict.classList.remove('hidden');
-            app.scrollTo(2350, 2350);
+            app.scrollTo(2650, 2650);
             isValid = false;
         }
 
@@ -496,7 +493,7 @@ app.onload = ()=>{
             rInvalidCity.classList.add('hidden');
         }else {
             rInvalidCity.classList.remove('hidden');
-            app.scrollTo(850, 850);
+            app.scrollTo(550, 550);
             isValid = false;
         }
         let rdCity = requested.city();
@@ -505,7 +502,7 @@ app.onload = ()=>{
             rdInvalidCity.classList.add('hidden');
         }else {
             rdInvalidCity.classList.remove('hidden');
-            app.scrollTo(2350, 2350);
+            app.scrollTo(2650, 2650);
             isValid = false;
         }
 
@@ -516,7 +513,7 @@ app.onload = ()=>{
             rInvalidState.classList.add('hidden');
         }else {
             rInvalidState.classList.remove('hidden');
-            app.scrollTo(850, 850);
+            app.scrollTo(550, 550);
             isValid = false;
         }
         let rdState = requested.state();
@@ -525,7 +522,7 @@ app.onload = ()=>{
             rdInvalidState.classList.add('hidden');
         }else {
             rdInvalidState.classList.remove('hidden');
-            app.scrollTo(2350, 2350);
+            app.scrollTo(2650, 2650);
             isValid = false;
         }
 
@@ -536,7 +533,7 @@ app.onload = ()=>{
             rInvalidPostalCode.classList.add('hidden');
         }else {
             rInvalidPostalCode.classList.remove('hidden');
-            app.scrollTo(850, 850);
+            app.scrollTo(550, 550);
             isValid = false;
         }
         let rdPostalCode = requested.postalCode();
@@ -545,7 +542,7 @@ app.onload = ()=>{
             rdInvalidPostalCode.classList.add('hidden');
         }else {
             rdInvalidPostalCode.classList.remove('hidden');
-            app.scrollTo(2350, 2350);
+            app.scrollTo(2650, 2650);
             isValid = false;
         }
 
@@ -556,7 +553,7 @@ app.onload = ()=>{
             invalidReport.classList.add('hidden');
         }else {
             invalidReport.classList.remove('hidden');
-            app.scrollTo(900, 900);
+            app.scrollTo(1000, 1000);
             isValid = false;
         }
 
@@ -567,7 +564,7 @@ app.onload = ()=>{
             invalidRequest.classList.add('hidden');
         }else {
             invalidRequest.classList.remove('hidden');
-            app.scrollTo(1300, 1300);
+            app.scrollTo(1450, 1450);
             isValid = false;
         }
 
@@ -579,7 +576,7 @@ app.onload = ()=>{
             invalidValueTree.classList.add('hidden');
         }else {
             invalidValueTree.classList.remove('hidden');
-            app.scrollTo(1500, 1500);
+            app.scrollTo(1800, 1800);
             isValid = false;
         }
         return isValid;
@@ -761,6 +758,12 @@ app.onload = ()=>{
             termSignerTarget.innerText = termName.toUpperCase();
             printBtn.style.display = 'block';
 
+            if ($('#check').is(':checked')){
+                $('#anticipationTarget').text('Sim');
+            } else {
+                $('#anticipationTarget').text('Não');
+            }
+
             alert('Seu documento foi gerado com sucesso. Clique em imprimir para realizar o download!');
         }
     }
@@ -777,40 +780,72 @@ app.onload = ()=>{
         pageFooter.style.display = 'none';
         print();
     }
-
-    let value1 = requester.valueOne();
-    let value2 = requester.valueTwo();
-    let value3 = requester.valueTree();
-    
-    value1.addEventListener("input", ()=>{
-        let formated1 = value1.value.replace(/[^\d]+/g,'');
-        let formated2 = value2.value.replace(/[^\d]+/g,'');
-        if (Number.isNaN(parseInt(formated2)) || parseInt(formated2) == 0){
-            value3.value = currency(formated1);
+    $('#valueOne').on('change', ()=>{
+        if (isNaN(moneyToInt('#valueTwo'))){
+            // se o segundo input esta vazio
+            // coloca o valor do primeiro input no total
+            $('#valueTree').val(currency(moneyToInt('#valueOne')));
         } else {
-            if (Number.isNaN(parseInt(formated1)) || parseInt(formated1) == 0){
-                value3.value = currency(formated2);
+            // se não está vazio verifica se o primeiro valor é vazio
+            if (isNaN(moneyToInt('#valueOne'))){
+                // se o primeiro input estiver vazio não há o que somar
+                // o segundo input será exibido no resultado
+                $('#valueTree').val(currency(moneyToInt('#valueTwo')));
             } else {
-                value3.value = currency(parseInt(value1.value) + parseInt(value2.value))
+                // se o codigo chegar até aqui nem o primeiro
+                // nem o segundo input são vazios então realiza
+                // a soma
+                let res = moneyToInt('#valueOne') + moneyToInt('#valueTwo');
+                $('#valueTree').val(currency(res));
             }
         }
+        if (isNaN(moneyToInt('#valueTree'))){
+            $('#valueTree').val(currency(0));
+        }
     });
-    value2.addEventListener("input", ()=>{
-        let formated1 = value1.value.replace(/[^\d]+/g,'');
-        let formated2 = value2.value.replace(/[^\d]+/g,'');
-        if (Number.isNaN(parseInt(formated1)) || parseInt(formated1) == 0){
-            value3.value = currency(formated2);
+    $('#valueTwo').on('change', ()=>{
+        if (isNaN(moneyToInt('#valueOne'))){
+            // se o primeiro input esta vazio
+            // coloca o valor do segundo input no total
+            $('#valueTree').val(currency(moneyToInt('#valueTwo')));
         } else {
-            if (Number.isNaN(parseInt(formated2)) || parseInt(formated2) == 0){
-                value3.value = currency(formated1);
+            // se não está vazio verifica se o segundo valor é vazio
+            if (isNaN(moneyToInt('#valueTwo'))){
+                // se o segundo input estiver vazio não há o que somar
+                // o primeiro input será exibido no resultado
+                $('#valueTree').val(currency(moneyToInt('#valueOne')));
             } else {
-                value3.value = currency(parseInt(value1.value) + parseInt(value2.value))
+                // se o codigo chegar até aqui nem o primeiro
+                // nem o segundo input são vazios então realiza
+                // a soma
+                let res = moneyToInt('#valueOne') + moneyToInt('#valueTwo');
+                $('#valueTree').val(currency(res));
             }
+        }
+        if (isNaN(moneyToInt('#valueTree'))){
+            $('#valueTree').val(currency(0));
         }
     });
     function currency(props){
         let result = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props);
         return result;
     }
-    
+    function moneyToInt(target){
+        let res = parseInt($(`${target}`).val().replace("R$", "").replace(",00","").replace(".",""));
+        return res;
+    }
+
+    $('#valueOne').maskMoney({
+        prefix:'R$ ',
+        allowNegative: true,
+        thousands:'.', decimal:',',
+        affixesStay: true
+    });
+    $('#valueTwo').maskMoney({
+        prefix:'R$ ',
+        allowNegative: true,
+        thousands:'.', decimal:',',
+        affixesStay: true
+    });
+
 };
