@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TJSC - Formulário</title>
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/docs.css">
+    <link rel="stylesheet" href="../../styles/index.css">
+    <link rel="stylesheet" href="../../styles/docs.css">
+    <link rel="shortcut icon" href="../../images/tjsc.png" type="image/x-icon">
 </head>
 <body>
     <main class="container-main" id="pageMain" style="display: flex;">
@@ -221,6 +222,17 @@
                     </div>
                     <span class="warn hidden" id="invalidRequest">
                         
+                    </span>
+                </div>
+                <div id="anticipationTextBox" class="input-group hidden">
+                    <div class="input-box" id="divRequest">
+                        <label class="input-placeholder">
+                            Descreva os motivos do pedido
+                        </label>
+                        <textarea class="form-input" style="height: 250px;" id="anticipation"></textarea>
+                    </div>
+                    <span class="warn hidden" id="invalidAnticipationCause">
+                        É necessário informar os motivos caso o pedido esteja selecionado!
                     </span>
                 </div>
             </div>
@@ -581,7 +593,15 @@
                 </div>
                 <div class="doc-text-box">
                     <h2 class="doc-text-name">
-                        III. Valor da causa
+                        III. Antecipação de tutela
+                    </h2>
+                    <p class="doc-text" id="anticipationTextTarget">
+                        
+                    </p>
+                </div>
+                <div class="doc-text-box">
+                    <h2 class="doc-text-name">
+                        IV. Valor da causa
                     </h2>
                     <p class="doc-text">
                         Valor do dano moral: <span id="firstValue">R$ 5.000,00</span>
@@ -589,7 +609,7 @@
                     <p class="doc-text">
                         Valor do dano material: <span id="secondValue">R$ 5.000,00</span>
                     </p>
-                    <p class="doc-text" id="valueTarget">
+                    <p class="doc-text">
                         Dá-se a causa o valor total de: <span id="thirdValue">R$ 10.000,00</span>
                     </p>
                 </div>
@@ -731,9 +751,9 @@
             </span>
         </div>
     </footer>   
-    <script src="/dist/index.bundle.js" defer></script>
-    <script src="/jQuery/jquery-3.7.0.min.js" defer></script>
-    <script src="/jQuery/jquery.mask.js" defer></script>
-    <script src="/jQuery/jquery.maskMoney.min.js" defer></script>
+    <script src="../../jQuery/jquery-3.7.0.min.js" defer></script>
+    <script src="../../jQuery/jquery.mask.js" defer></script>
+    <script src="../../jQuery/jquery.maskMoney.min.js" defer></script>
+    <script src="../../dist/test.bundle.js" defer></script>
 </body>
 </html>
