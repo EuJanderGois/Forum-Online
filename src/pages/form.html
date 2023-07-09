@@ -22,7 +22,7 @@
             <h1 class="title">
                 Dados do reclamante
             </h1>
-            <div class="section">
+            <div class="section" id="r_infoScrollTarget">
                 <div class="input-group">
                     <div class="input-box" id="rNameDiv">
                         <label class="input-placeholder">
@@ -78,7 +78,7 @@
             <h1 class="title">
                 Endereço do reclamante
             </h1>
-            <div class="section">
+            <div class="section" id="r_addressScrollTarget">
                 <div class="input-group">
                     <div class="input-box" id="rStreetDiv">                            
                         <label class="input-placeholder">
@@ -178,7 +178,7 @@
             </div>
         </div>
 
-        <div class="info-container">
+        <div class="info-container" id="reportScrollTarget">
             <h1 class="title">
                 Breve Relato do Caso
             </h1>
@@ -201,7 +201,7 @@
             <h1 class="title">
                 Solicitação
             </h1>
-            <div class="section">
+            <div class="section" id="requestScrollTarget">
                 <div class="input-group">
                     <div class="input-box" id="divRequest">
                         <label class="input-placeholder">
@@ -220,9 +220,6 @@
                             Pedido de antecipação de tutela
                         </label>
                     </div>
-                    <span class="warn hidden" id="invalidRequest">
-                        
-                    </span>
                 </div>
                 <div id="anticipationTextBox" class="input-group hidden">
                     <div class="input-box" id="divRequest">
@@ -237,7 +234,7 @@
                 </div>
             </div>
         </div>
-        <div class="info-container">
+        <div class="info-container" id="causeScrollTarget">
             <h1 class="title">
                 Valor da causa
             </h1>
@@ -280,7 +277,7 @@
             <h1 class="title">
                 Dados do Reclamado
             </h1>
-            <div class="section">
+            <div class="section" id="rd_infoScrollTarget">
                 <div class="input-group">
                     <div class="input-box" id="rdNameDiv">
                         <label class="input-placeholder">
@@ -333,7 +330,7 @@
             <h1 class="title">
                 Endereço do Reclamado
             </h1>
-            <div class="section">
+            <div class="section" id="rd_addressScrollTarget">
                 <div class="input-group">
                     <div class="input-box" id="rdStreetDiv">                            
                         <label class="input-placeholder">
@@ -750,10 +747,28 @@
                 </div>
             </span>
         </div>
-    </footer>   
+    </footer>
+    <div id="modal" class="modal-box">
+        <div class="modal-inside">
+            <div class="modal-header">
+                <div></div>
+                <p class="modal-header-text">
+                    Seu documento está pronto
+                </p>
+                <img id="modalClose" width="20" height="20" src="../../images/xmark-solid.svg" alt="">
+            </div>
+            <p class="modal-text">
+                Seu documento foi gerado com sucesso,
+                clique em imprimir para realizar o download.
+            </p>
+            <div class="modal-footer">
+                <a href="" class="btn" id="modalSend">Continuar</a>
+            </div>
+        </div>
+    </div>   
     <script src="../../jQuery/jquery-3.7.0.min.js" defer></script>
     <script src="../../jQuery/jquery.mask.js" defer></script>
     <script src="../../jQuery/jquery.maskMoney.min.js" defer></script>
-    <script src="../../dist/test.bundle.js" defer></script>
+    <script src="../scripts/test.js" defer></script>
 </body>
 </html>

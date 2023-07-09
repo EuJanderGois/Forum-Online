@@ -110,14 +110,18 @@ window.onload = ()=>{
             requester.invalidName.addClass('hidden');
         } else {
             requester.invalidName.removeClass('hidden');
-            window.scrollTo(0, 30);
+            $('html, body').animate({
+                scrollTop: $('#r_infoScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.name.val()){
             required.invalidName.addClass('hidden');
         } else {
             required.invalidName.removeClass('hidden');
-            window.scrollTo(0, 2400);
+            $('html, body').animate({
+                scrollTop: $('#rd_infoScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // document
@@ -125,14 +129,18 @@ window.onload = ()=>{
             requester.invalidDocument.addClass('hidden');
         } else {
             requester.invalidDocument.removeClass('hidden');
-            window.scrollTo(0, 30);
+            $('html, body').animate({
+                scrollTop: $('#r_infoScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.document.val()){
             required.invalidDocument.addClass('hidden');
         } else {
             required.invalidDocument.removeClass('hidden');
-            window.scrollTo(0, 2400);
+            $('html, body').animate({
+                scrollTop: $('#rd_infoScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // email
@@ -140,14 +148,18 @@ window.onload = ()=>{
             requester.invalidEmail.addClass('hidden');
         } else {
             requester.invalidEmail.removeClass('hidden');
-            window.scrollTo(0, 30);
+            $('html, body').animate({
+                scrollTop: $('#r_infoScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.email.val()){
             required.invalidEmail.addClass('hidden');
         } else {
             required.invalidEmail.removeClass('hidden');
-            window.scrollTo(0, 2400);
+            $('html, body').animate({
+                scrollTop: $('#rd_infoScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // phone
@@ -155,14 +167,18 @@ window.onload = ()=>{
             requester.invalidPhone.addClass('hidden');
         } else {
             requester.invalidPhone.removeClass('hidden');
-            window.scrollTo(0, 30);
+            $('html, body').animate({
+                scrollTop: $('#r_infoScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.phone.val()){
             required.invalidPhone.addClass('hidden');
         } else {
             required.invalidPhone.removeClass('hidden');
-            window.scrollTo(0, 2400);
+            $('html, body').animate({
+                scrollTop: $('#rd_infoScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // street
@@ -170,14 +186,18 @@ window.onload = ()=>{
             requester.invalidStreet.addClass('hidden');
         } else {
             requester.invalidStreet.removeClass('hidden');
-            window.scrollTo(0, 550);
+            $('html, body').animate({
+                scrollTop: $('#r_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.street.val()){
             required.invalidStreet.addClass('hidden');
         } else {
             required.invalidStreet.removeClass('hidden');
-            window.scrollTo(0, 3000);
+            $('html, body').animate({
+                scrollTop: $('#rd_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // number
@@ -185,14 +205,18 @@ window.onload = ()=>{
             requester.invalidNumber.addClass('hidden');
         } else {
             requester.invalidNumber.removeClass('hidden');
-            window.scrollTo(0, 550);
+            $('html, body').animate({
+                scrollTop: $('#r_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.number.val()){
             required.invalidNumber.addClass('hidden');
         } else {
             required.invalidNumber.removeClass('hidden');
-            window.scrollTo(0, 3000);
+            $('html, body').animate({
+                scrollTop: $('#rd_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // district
@@ -200,14 +224,18 @@ window.onload = ()=>{
             requester.invalidDistrict.addClass('hidden');
         } else {
             requester.invalidDistrict.removeClass('hidden');
-            window.scrollTo(0, 550);
+            $('html, body').animate({
+                scrollTop: $('#r_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.district.val()){
             required.invalidDistrict.addClass('hidden');1
         } else {
             required.invalidDistrict.removeClass('hidden');
-            window.scrollTo(0, 3000);
+            $('html, body').animate({
+                scrollTop: $('#rd_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // city
@@ -215,14 +243,18 @@ window.onload = ()=>{
             requester.invalidCity.addClass('hidden');
         } else {
             requester.invalidCity.removeClass('hidden');
-            window.scrollTo(0, 550);
+            $('html, body').animate({
+                scrollTop: $('#r_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.city.val()){
             required.invalidCity.addClass('hidden');
         } else {
             required.invalidCity.removeClass('hidden');
-            window.scrollTo(0, 3000);
+            $('html, body').animate({
+                scrollTop: $('#rd_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // state
@@ -230,14 +262,18 @@ window.onload = ()=>{
             requester.invalidState.addClass('hidden');
         } else {
             requester.invalidState.removeClass('hidden');
-            window.scrollTo(0, 550);
+            $('html, body').animate({
+                scrollTop: $('#r_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.state.val()){
             required.invalidState.addClass('hidden');
         } else {
             required.invalidState.removeClass('hidden');
-            window.scrollTo(0, 3000);
+            $('html, body').animate({
+                scrollTop: $('#rd_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // postal code
@@ -245,14 +281,18 @@ window.onload = ()=>{
             requester.invalidPostalCode.addClass('hidden');
         } else {
             requester.invalidPostalCode.removeClass('hidden');
-            window.scrollTo(0, 550);
+            $('html, body').animate({
+                scrollTop: $('#r_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         if (required.postalCode.val()){
             required.invalidPostalCode.addClass('hidden');
         } else {
             required.invalidPostalCode.removeClass('hidden');
-            window.scrollTo(0, 3000);
+            $('html, body').animate({
+                scrollTop: $('#rd_addressScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // report
@@ -260,7 +300,9 @@ window.onload = ()=>{
             requester.invalidReport.addClass('hidden');
         } else {
             requester.invalidReport.removeClass('hidden');
-            window.scrollTo(0, 1000);
+            $('html, body').animate({
+                scrollTop: $('#reportScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // require
@@ -268,7 +310,9 @@ window.onload = ()=>{
             requester.invalidRequest.addClass('hidden');
         } else {
             requester.invalidRequest.removeClass('hidden');
-            window.scrollTo(0, 1450);
+            $('html, body').animate({
+                scrollTop: $('#requestScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         // anticipation
@@ -277,7 +321,9 @@ window.onload = ()=>{
                 requester.invalidAnticipationCause.addClass('hidden');
             } else {
                 requester.invalidAnticipationCause.removeClass('hidden');
-                window.scrollTo(0, 1650);
+                $('html, body').animate({
+                    scrollTop: $('#check').offset().top - 150
+                }, 800);
                 isValid = false;
             }
         }
@@ -286,7 +332,9 @@ window.onload = ()=>{
             requester.invalidValueTree.addClass('hidden');
         } else {
             requester.invalidValueTree.removeClass('hidden');
-            window.scrollTo(0, 2150);
+            $('html, body').animate({
+                scrollTop: $('#causeScrollTarget').offset().top - 150
+            }, 800);
             isValid = false;
         }
         return isValid;
@@ -489,4 +537,7 @@ window.onload = ()=>{
     } else {
         $('#anticipationTextBox').addClass('hidden');
     }
+
+    // popups
+    
 }
