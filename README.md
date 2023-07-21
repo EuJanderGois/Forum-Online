@@ -6,6 +6,10 @@ Para uma melhor compreensão dos termos utilizados neste documento é recomendá
 
 ---
 
+### notas de lançamento
+
+Última versão: [v1.0.0](./release-notes/last.md)
+
 ## Como visualizar
 
 Para visualizar o ultimo Deploy desta aplicação [Clique aqui](https://itapoavara1.github.io/JEC/).

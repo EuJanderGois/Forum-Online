@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../../images/tjsc.png" type="image/x-icon">
 </head>
 <body>
-    <main class="container-main" id="pageMain" style="display: flex;">
+    <main class="container-main" id="pageMain">
         <nav class="navbar">
             <div class="image-container">
                 <img src="../../images/tjsc.png" width="115" height="87" alt="">
@@ -18,117 +18,118 @@
         </nav>
         
         <!-- DADOS DO RECLAMANTE -->
+        <!-- INFORMAÇÕES PESSOAIS 1 -->
         <div class="info-container">
             <h1 class="title">
                 Dados do reclamante
             </h1>
-            <div class="section" id="r_infoScrollTarget">
+            <div class="section" id="fr_infoScrollTarget">
                 <div class="input-group">
-                    <div class="input-box" id="rNameDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Nome
                         </label>
-                        <input class="form-input" type="text" id="rName">
+                        <input class="form-input" type="text" id="fr_name">
                     </div>
-                    <span class="warn hidden" id="rInvalidName">
+                    <span class="warn hidden" id="fr_invalidName">
                         É necessário informar o nome!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rDocDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             CPF/CNPJ
                             <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input class="form-input" type="text" id="rDoc">
+                        <input class="form-input" type="text" id="fr_document">
                     </div>
-                    <span class="warn hidden" id="rInvalidDocument">
+                    <span class="warn hidden" id="fr_invalidDocument">
                         É necessário informar o documento!
                     </span>
                 </div>
             
             
                 <div class="input-group">
-                    <div class="input-box" id="rEmailDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Email
                         </label>
-                        <input class="form-input" type="text" id="rEmail">
+                        <input class="form-input" type="text" id="fr_email">
                     </div>
-                    <span class="warn hidden" id="rInvalidEmail">
+                    <span class="warn hidden" id="fr_invalidEmail">
                         É necessário informar o email!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rPhoneDiv">
+                    <div class="input-box"">
                         <label class="input-placeholder">
                             Telefone
                             <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="rPhone">
+                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="fr_phone">
                     </div>
-                    <span class="warn hidden" id="rInvalidPhone">
+                    <span class="warn hidden" id="fr_invalidPhone">
                         É necessário informar o telefone!
                     </span>
                 </div>
             </div>
         </div>
-        <!-- ENDEREÇO DO RECLAMANTE -->
+        <!-- ENDEREÇO 1 -->
         <div class="info-container">
             <h1 class="title">
                 Endereço do reclamante
             </h1>
-            <div class="section" id="r_addressScrollTarget">
+            <div class="section" id="fr_addressScrollTarget">
                 <div class="input-group">
-                    <div class="input-box" id="rStreetDiv">                            
+                    <div class="input-box">                            
                         <label class="input-placeholder">
                             Rua
                         </label>
-                        <input class="form-input" type="text" id="rStreet">
+                        <input class="form-input" type="text" id="fr_street">
                     </div>
-                    <span class="warn hidden" id="rInvalidStreet">
+                    <span class="warn hidden" id="fr_invalidStreet">
                         É necessário informar a rua!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rNumberDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Número
                             <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input class="form-input" type="number"id="rNumber">
+                        <input class="form-input" type="number"id="fr_number">
                     </div>
-                    <span class="warn hidden" id="rInvalidNumber">
+                    <span class="warn hidden" id="fr_invalidNumber">
                         É necessário informar o número (informe 0 caso não possua número)!
                     </span>
                 </div>
             
                 <div class="input-group">
-                    <div class="input-box" id="rDistrictDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Bairro
                         </label>
-                        <input class="form-input" type="text" id="rDistrict">
+                        <input class="form-input" type="text" id="fr_district">
                     </div>
-                    <span class="warn hidden" id="rInvalidDistrict">
+                    <span class="warn hidden" id="fr_invalidDistrict">
                         É necessário informar o bairro!
                     </span>
                 </div>
             
                 <div class="input-group">
-                    <div class="input-box" id="rCityDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Cidade
                         </label>
-                        <input class="form-input" type="text" id="rCity">
+                        <input class="form-input" type="text" id="fr_city">
                     </div>
-                    <span class="warn hidden" id="rInvalidCity">
+                    <span class="warn hidden" id="fr_invalidCity">
                         É necessário informar a cidade!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="form-floating" id="rStateDiv">
-                        <select name="" id="rState" class="form-select">
+                    <div class="form-floating">
+                        <select name="" id="fr_state" class="form-select">
                             <option value="0">Selecione o estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -159,25 +160,377 @@
                             <option value="TO">Tocantins</option>
                         </select>
                     </div>
-                    <span class="warn hidden" id="rInvalidState">
+                    <span class="warn hidden" id="fr_invalidState">
                         É necessário informar o estado!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rPostalCodeDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             CEP
                             <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input data-mask="00000-000" class="form-input" type="text" id="rPostalCode">
+                        <input data-mask="00000-000" class="form-input" type="text" id="fr_postalCode">
                     </div>
-                    <span class="warn hidden" id="rInvalidPostalCode">
+                    <span class="warn hidden" id="fr_invalidPostalCode">
                         É necessário informar o CEP!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="check-box">
+                        <input type="checkbox" id="fr_check"></input>
+                        <label class="input-placeholder check">
+                            Há mais de um reclamante
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASO O CLIENTE (PESSOA PREENCHENDO) MARQUE MAIS DE UM RECLAMANTE
+        O RECLAMANTE 2 SERÁ EXIBIDO -->
+
+        <!-- INFORMAÇÕES PESSOAIS 2 -->
+        <div class="info-container" id="sr_infoFieldDisplayTarget">
+            <h1 class="title">
+                Dados do segundo reclamante
+            </h1>
+            <div class="section" id="sr_InfoScrollTarget">
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Nome
+                        </label>
+                        <input class="form-input" type="text" id="sr_name">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidName">
+                        É necessário informar o nome!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            CPF/CNPJ
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input class="form-input" type="text" id="sr_document">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidDocument">
+                        É necessário informar o documento!
+                    </span>
+                </div>
+            
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Email
+                        </label>
+                        <input class="form-input" type="text" id="sr_email">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidEmail">
+                        É necessário informar o email!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box"">
+                        <label class="input-placeholder">
+                            Telefone
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="sr_phone">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidPhone">
+                        É necessário informar o telefone!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- ENDEREÇO 2 -->
+        <div class="info-container hidden" id="sr_addressFieldDisplayTarget">
+            <h1 class="title">
+                Endereço do segundo reclamante
+            </h1>
+            <div class="section" id="sr_AddressScrollTarget">
+                <div class="input-group">
+                    <div class="input-box">                            
+                        <label class="input-placeholder">
+                            Rua
+                        </label>
+                        <input class="form-input" type="text" id="sr_street">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidStreet">
+                        É necessário informar a rua!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Número
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input class="form-input" type="number"id="sr_number">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidNumber">
+                        É necessário informar o número (informe 0 caso não possua número)!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Bairro
+                        </label>
+                        <input class="form-input" type="text" id="sr_district">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidDistrict">
+                        É necessário informar o bairro!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Cidade
+                        </label>
+                        <input class="form-input" type="text" id="sr_city">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidCity">
+                        É necessário informar a cidade!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="form-floating">
+                        <select name="" id="sr_state" class="form-select">
+                            <option value="0">Selecione o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <span class="warn hidden" id="sr_invalidState">
+                        É necessário informar o estado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            CEP
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input data-mask="00000-000" class="form-input" type="text" id="sr_postalCode">
+                    </div>
+                    <span class="warn hidden" id="sr_invalidPostalCode">
+                        É necessário informar o CEP!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="check-box">
+                        <input type="checkbox" id="sr_check"></input>
+                        <label class="input-placeholder check">
+                            Há mais de dois reclamantes
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM DOS DADOS DO RECLAMANTE 2 -->
+
+
+        <!-- CASO O CLIENTE (PESSOA PREENCHENDO) MARQUE MAIS DE UM RECLAMANTE
+        O RECLAMANTE 3 SERÁ EXIBIDO -->
+                
+        <!-- INFORMAÇÕES PESSOAIS 3 -->
+        <div class="info-container hidden" id="tr_infoFieldDisplayTarget">
+            <h1 class="title">
+                Dados do terceiro reclamante
+            </h1>
+            <div class="section" id="tr_InfoScrollTarget">
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Nome
+                        </label>
+                        <input class="form-input" type="text" id="tr_name">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidName">
+                        É necessário informar o nome!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            CPF/CNPJ
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input class="form-input" type="text" id="tr_document">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidDocument">
+                        É necessário informar o documento!
+                    </span>
+                </div>
+            
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Email
+                        </label>
+                        <input class="form-input" type="text" id="tr_email">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidEmail">
+                        É necessário informar o email!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box"">
+                        <label class="input-placeholder">
+                            Telefone
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="tr_phone">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidPhone">
+                        É necessário informar o telefone!
                     </span>
                 </div>
             </div>
         </div>
 
+        <!-- ENDEREÇO 3 -->
+        <div class="info-container hidden" id="tr_addressFieldDisplayTarget">
+            <h1 class="title">
+                Endereço do terceiro reclamante
+            </h1>
+            <div class="section" id="tr_AddressScrollTarget">
+                <div class="input-group">
+                    <div class="input-box">                            
+                        <label class="input-placeholder">
+                            Rua
+                        </label>
+                        <input class="form-input" type="text" id="tr_street">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidStreet">
+                        É necessário informar a rua!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Número
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input class="form-input" type="number"id="tr_number">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidNumber">
+                        É necessário informar o número (informe 0 caso não possua número)!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Bairro
+                        </label>
+                        <input class="form-input" type="text" id="tr_district">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidDistrict">
+                        É necessário informar o bairro!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Cidade
+                        </label>
+                        <input class="form-input" type="text" id="tr_city">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidCity">
+                        É necessário informar a cidade!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="form-floating">
+                        <select name="" id="tr_state" class="form-select">
+                            <option value="0">Selecione o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <span class="warn hidden" id="tr_invalidState">
+                        É necessário informar o estado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            CEP
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input data-mask="00000-000" class="form-input" type="text" id="tr_postalCode">
+                    </div>
+                    <span class="warn hidden" id="tr_invalidPostalCode">
+                        É necessário informar o CEP!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--
+            FIM DOS DADOS DO RECLAMANTE 3
+        -->
+
+
+        <!-- DESCRIÇÃO DO CASO -->
         <div class="info-container" id="reportScrollTarget">
             <h1 class="title">
                 Breve Relato do Caso
@@ -196,7 +549,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- SOLICITAÇÃO -->
         <div class="info-container">
             <h1 class="title">
                 Solicitação
@@ -234,6 +587,7 @@
                 </div>
             </div>
         </div>
+        <!-- VALORES -->
         <div class="info-container" id="causeScrollTarget">
             <h1 class="title">
                 Valor da causa
@@ -273,114 +627,121 @@
                 </div>
             </div>
         </div>    
+
+
+        <!-- INICIO DOS DADOS DO RECLAMADO 1 -->
+        <!-- RECLAMADO 1 -->
+
+        <!-- PERSONAL INFO -->
         <div class="info-container">
             <h1 class="title">
                 Dados do Reclamado
             </h1>
-            <div class="section" id="rd_infoScrollTarget">
+            <div class="section" id="frd_infoScrollTarget">
                 <div class="input-group">
-                    <div class="input-box" id="rdNameDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Nome
                         </label>
-                        <input class="form-input" type="text" id="rdName">
+                        <input class="form-input" type="text" id="frd_name">
                     </div>
-                    <span class="warn hidden" id="rdInvalidName">
+                    <span class="warn hidden" id="frd_invalidName">
                         É necessário informar o nome do reclamado!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rdDocDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             CPF/CNPJ
                             <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input class="form-input" type="text" id="rdDoc">
+                        <input class="form-input" type="text" id="frd_document">
                     </div>
-                    <span class="warn hidden" id="rdInvalidDocument">
+                    <span class="warn hidden" id="frd_invalidDocument">
                         É necessário informar o documento do reclamado!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rdEmailDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Email
                         </label>
-                        <input class="form-input" type="text" id="rdEmail">
+                        <input class="form-input" type="text" id="frd_email">
                     </div>
-                    <span class="warn hidden" id="rdInvalidEmail">
+                    <span class="warn hidden" id="frd_invalidEmail">
                         É necessário informar o email do reclamado!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rdPhoneDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Telefone
                             <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="rdPhone">
+                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="frd_phone">
                     </div>
-                    <span class="warn hidden" id="rdInvalidPhone">
+                    <span class="warn hidden" id="frd_invalidPhone">
                         É necessário informar o telefone do reclamado!
                     </span>
                 </div>
             </div>
         </div>
+        <!-- ADDRESS -->
         <div class="info-container">
             <h1 class="title">
                 Endereço do Reclamado
             </h1>
-            <div class="section" id="rd_addressScrollTarget">
+            <div class="section" id="frd_addressScrollTarget">
                 <div class="input-group">
-                    <div class="input-box" id="rdStreetDiv">                            
+                    <div class="input-box">                            
                         <label class="input-placeholder">
                             Rua
                         </label>
-                        <input class="form-input" type="text" id="rdStreet">
+                        <input class="form-input" type="text" id="frd_street">
                     </div>
-                    <span class="warn hidden" id="rdInvalidStreet">
+                    <span class="warn hidden" id="frd_invalidStreet">
                         É necessário informar a rua do reclamado!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rdNumberDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Número
                             <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input class="form-input" type="number"id="rdNumber">
+                        <input class="form-input" type="number"id="frd_number">
                     </div>
-                    <span class="warn hidden" id="rdInvalidNumber">
+                    <span class="warn hidden" id="frd_invalidNumber">
                         É necessário informar um número (informe 0 caso não possua número)!
                     </span>
                 </div>
             
                 <div class="input-group">
-                    <div class="input-box" id="rdDistrictDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Bairro
                         </label>
-                        <input class="form-input" type="text" id="rdDistrict">
+                        <input class="form-input" type="text" id="frd_district">
                     </div>
-                    <span class="warn hidden" id="rdInvalidDistrict">
+                    <span class="warn hidden" id="frd_invalidDistrict">
                         É necessário informar o bairro do reclamado!
                     </span>
                 </div>
             
                 <div class="input-group">
-                    <div class="input-box" id="rdCityDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             Cidade
                         </label>
-                        <input class="form-input" type="text" id="rdCity">
+                        <input class="form-input" type="text" id="frd_city">
                     </div>
-                    <span class="warn hidden" id="rdInvalidCity">
+                    <span class="warn hidden" id="frd_invalidCity">
                         É necessário informar a cidade do reclamado!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="form-floating" id="rdStateDiv">
-                        <select name="" id="rdState" class="form-select">
+                    <div class="form-floating">
+                        <select name="" id="frd_state" class="form-select">
                             <option value="0">Selecione o estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -411,24 +772,369 @@
                             <option value="TO">Tocantins</option>
                         </select>
                     </div>
-                    <span class="warn hidden" id="rdInvalidState">
+                    <span class="warn hidden" id="frd_invalidState">
                         É necessário informar o estado do reclamado!
                     </span>
                 </div>
                 <div class="input-group">
-                    <div class="input-box" id="rdPostalCodeDiv">
+                    <div class="input-box">
                         <label class="input-placeholder">
                             CEP
                             <span class="after-placeholder">(somente números)</span>
                         </label>
-                        <input data-mask="00000-000" class="form-input" type="text" id="rdPostalCode">
+                        <input data-mask="00000-000" class="form-input" type="text" id="frd_postalCode">
                     </div>
-                    <span class="warn hidden" id="rdInvalidPostalCode">
+                    <span class="warn hidden" id="frd_invalidPostalCode">
+                        É necessário informar o CEP do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="check-box">
+                        <input type="checkbox" id="frd_check"></input>
+                        <label class="input-placeholder check">
+                            Há mais de um reclamado
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- INICIO DOS DADOS DO RECLAMADO 2 -->
+        <!-- RECLAMADO 2 -->
+
+        <!-- PERSONAL INFO -->
+        <div class="info-container hidden" id="srd_infoFieldDisplayTarget">
+            <h1 class="title">
+                Dados do segundo Reclamado
+            </h1>
+            <div class="section" id="srd_infoScrollTarget">
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Nome
+                        </label>
+                        <input class="form-input" type="text" id="srd_name">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidName">
+                        É necessário informar o nome do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            CPF/CNPJ
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input class="form-input" type="text" id="srd_document">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidDocument">
+                        É necessário informar o documento do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Email
+                        </label>
+                        <input class="form-input" type="text" id="srd_email">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidEmail">
+                        É necessário informar o email do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Telefone
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="srd_phone">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidPhone">
+                        É necessário informar o telefone do reclamado!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- ADDRESS -->
+        <div class="info-container hidden" id="srd_addressFieldDisplayTarget">
+            <h1 class="title">
+                Endereço do segundo Reclamado
+            </h1>
+            <div class="section" id="srd_addressScrollTarget">
+                <div class="input-group">
+                    <div class="input-box">                            
+                        <label class="input-placeholder">
+                            Rua
+                        </label>
+                        <input class="form-input" type="text" id="srd_street">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidStreet">
+                        É necessário informar a rua do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Número
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input class="form-input" type="number"id="srd_number">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidNumber">
+                        É necessário informar um número (informe 0 caso não possua número)!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Bairro
+                        </label>
+                        <input class="form-input" type="text" id="srd_district">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidDistrict">
+                        É necessário informar o bairro do reclamado!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Cidade
+                        </label>
+                        <input class="form-input" type="text" id="srd_city">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidCity">
+                        É necessário informar a cidade do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="form-floating">
+                        <select name="" id="srd_state" class="form-select">
+                            <option value="0">Selecione o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <span class="warn hidden" id="srd_invalidState">
+                        É necessário informar o estado do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            CEP
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input data-mask="00000-000" class="form-input" type="text" id="srd_postalCode">
+                    </div>
+                    <span class="warn hidden" id="srd_invalidPostalCode">
+                        É necessário informar o CEP do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="check-box">
+                        <input type="checkbox" id="srd_check"></input>
+                        <label class="input-placeholder check">
+                            Há mais de dois reclamantes
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- INICIO DOS DADOS DO RECLAMADO 3 -->
+        <!-- RECLAMADO 3 -->
+
+        <!-- PERSONAL INFO -->
+        <div class="info-container hidden" id="trd_infoFieldDisplayTarget">
+            <h1 class="title">
+                Dados do terceiro Reclamado
+            </h1>
+            <div class="section" id="trd_infoScrollTarget">
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Nome
+                        </label>
+                        <input class="form-input" type="text" id="trd_name">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidName">
+                        É necessário informar o nome do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            CPF/CNPJ
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input class="form-input" type="text" id="trd_document">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidDocument">
+                        É necessário informar o documento do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Email
+                        </label>
+                        <input class="form-input" type="text" id="trd_email">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidEmail">
+                        É necessário informar o email do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Telefone
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input data-mask="(00) 0 0000-0000" class="form-input" type="text" id="trd_phone">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidPhone">
+                        É necessário informar o telefone do reclamado!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- ADDRESS -->
+        <div class="info-container hidden" id="trd_addressFieldDisplayTarget">
+            <h1 class="title">
+                Endereço do terceiro Reclamado
+            </h1>
+            <div class="section" id="trd_addressScrollTarget">
+                <div class="input-group">
+                    <div class="input-box">                            
+                        <label class="input-placeholder">
+                            Rua
+                        </label>
+                        <input class="form-input" type="text" id="trd_street">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidStreet">
+                        É necessário informar a rua do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Número
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input class="form-input" type="number"id="trd_number">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidNumber">
+                        É necessário informar um número (informe 0 caso não possua número)!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Bairro
+                        </label>
+                        <input class="form-input" type="text" id="trd_district">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidDistrict">
+                        É necessário informar o bairro do reclamado!
+                    </span>
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            Cidade
+                        </label>
+                        <input class="form-input" type="text" id="trd_city">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidCity">
+                        É necessário informar a cidade do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="form-floating">
+                        <select name="" id="trd_state" class="form-select">
+                            <option value="0">Selecione o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <span class="warn hidden" id="trd_invalidState">
+                        É necessário informar o estado do reclamado!
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label class="input-placeholder">
+                            CEP
+                            <span class="after-placeholder">(somente números)</span>
+                        </label>
+                        <input data-mask="00000-000" class="form-input" type="text" id="trd_postalCode">
+                    </div>
+                    <span class="warn hidden" id="trd_invalidPostalCode">
                         É necessário informar o CEP do reclamado!
                     </span>
                 </div>
             </div>
         </div>
+
+
+        <!-- FORM CONTROLL BUTTONS -->
         <div class="button-container">
             <a class="btn"  id="sendBtn">Enviar dados</a>
             <a class="btn btn-confirm hidden" id="printBtn">Imprimir</a>
@@ -436,7 +1142,7 @@
     </main>
 
     <!-- INICIO DO DOCUMENTO 1 -->
-    <div id="doc1" style="display: none;">
+    <div id="doc1" class="hidden">
         <div id="toPrint">
             <div class="generated">
                 <p class="generated-text">
@@ -472,103 +1178,290 @@
                 </div>
                 <div class="doc-info-box">
                     <div class="doc-section-inside">
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                Ação:
-                            </h2>
-                            <p class="doc-name-content">
-                                Procedimento do Juizado Especial Cível/PROC
-                            </p>
+                        <div class="process-info">
+                            <div class="doc-name-box">
+                                <h2 class="doc-name">
+                                    Ação:
+                                </h2>
+                                <p class="doc-name-content">
+                                    Procedimento do Juizado Especial Cível/PROC
+                                </p>
+                            </div>
+                            <div class="doc-name-box hidden" id="anticipationDisplayTarget">
+                                <h2 class="doc-name">
+                                    Pedido de antecipação de tutela: Sim
+                                </h2>
+                            </div>
                         </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                Pedido de antecipação de tutela:
-                            </h2>
-                            <p class="doc-name-content" id="anticipationTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
+                        <div class="user-info">
+                            <h1 class="user-info-title">
                                 Reclamante(s):
-                            </h2>
-                            <p class="doc-name-content" id="requesterNameTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                Endereço:
-                            </h2>
-                            <p class="doc-name-content" id="requesterAddressTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                CPF/CNPJ:
-                            </h2>
-                            <p class="doc-name-content" id="requesterDocTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                Email:
-                            </h2>
-                            <p class="doc-name-content" id="requesterEmailTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                Whatsapp/Telefone:
-                            </h2>
-                            <p class="doc-name-content" id="requesterPhoneTarget">
-                                
-                            </p>
+                            </h1>
+                            <!-- PRIMEIRO RECLAMANTE -->
+                            <div class="user-box">
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Nome:
+                                    </h2>
+                                    <p class="doc-name-content" id="fr_nameTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Endereço:
+                                    </h2>
+                                    <p class="doc-name-content" id="fr_addressTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        CPF/CNPJ:
+                                    </h2>
+                                    <p class="doc-name-content" id="fr_documentTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Email:
+                                    </h2>
+                                    <p class="doc-name-content" id="fr_emailTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Whatsapp/Telefone:
+                                    </h2>
+                                    <p class="doc-name-content" id="fr_phoneTarget">
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- SEGUNDO RECLAMANTE -->
+                            <div class="user-box hidden" id="sr_displayTarget">
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Nome:
+                                    </h2>
+                                    <p class="doc-name-content" id="sr_nameTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Endereço:
+                                    </h2>
+                                    <p class="doc-name-content" id="sr_addressTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        CPF/CNPJ:
+                                    </h2>
+                                    <p class="doc-name-content" id="sr_documentTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Email:
+                                    </h2>
+                                    <p class="doc-name-content" id="sr_emailTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Whatsapp/Telefone:
+                                    </h2>
+                                    <p class="doc-name-content" id="sr_phoneTarget">
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- TERCEIRO RECLAMANTE -->
+                            <div class="user-box hidden" id="tr_displayTarget">
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Nome:
+                                    </h2>
+                                    <p class="doc-name-content" id="tr_nameTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Endereço:
+                                    </h2>
+                                    <p class="doc-name-content" id="tr_addressTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        CPF/CNPJ:
+                                    </h2>
+                                    <p class="doc-name-content" id="tr_documentTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Email:
+                                    </h2>
+                                    <p class="doc-name-content" id="tr_emailTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Whatsapp/Telefone:
+                                    </h2>
+                                    <p class="doc-name-content" id="tr_phoneTarget">
+                                        
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="doc-section-inside">
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
+                        <div class="user-info">
+                            <h1 class="user-info-title">
                                 Reclamado(s):
-                            </h2>
-                            <p class="doc-name-content" id="requiredNameTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                Endereço:
-                            </h2>
-                            <p class="doc-name-content" id="requiredAddressTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                CPF/CNPJ:
-                            </h2>
-                            <p class="doc-name-content" id="requiredDocTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                Email:
-                            </h2>
-                            <p class="doc-name-content" id="requiredEmailTarget">
-                                
-                            </p>
-                        </div>
-                        <div class="doc-name-box">
-                            <h2 class="doc-name">
-                                Whatsapp/Telefone:
-                            </h2>
-                            <p class="doc-name-content" id="requiredPhoneTarget">
-                                
-                            </p>
+                            </h1>
+                            <!-- PRIMEIRO RECLAMADO -->
+                            <div class="user-box">
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Nome:
+                                    </h2>
+                                    <p class="doc-name-content" id="frd_nameTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Endereço:
+                                    </h2>
+                                    <p class="doc-name-content" id="frd_addressTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        CPF/CNPJ:
+                                    </h2>
+                                    <p class="doc-name-content" id="frd_documentTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Email:
+                                    </h2>
+                                    <p class="doc-name-content" id="frd_emailTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Whatsapp/Telefone:
+                                    </h2>
+                                    <p class="doc-name-content" id="frd_phoneTarget">
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- SEGUNDO RECLAMADO -->
+                            <div class="user-box hidden" id="srd_displayTarget">
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Nome:
+                                    </h2>
+                                    <p class="doc-name-content" id="srd_nameTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Endereço:
+                                    </h2>
+                                    <p class="doc-name-content" id="srd_addressTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        CPF/CNPJ:
+                                    </h2>
+                                    <p class="doc-name-content" id="srd_documentTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Email:
+                                    </h2>
+                                    <p class="doc-name-content" id="srd_emailTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Whatsapp/Telefone:
+                                    </h2>
+                                    <p class="doc-name-content" id="srd_phoneTarget">
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- TERCEIRO RECLAMADO -->
+                            <div class="user-box hidden" id="trd_displayTarget">
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Nome:
+                                    </h2>
+                                    <p class="doc-name-content" id="trd_nameTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Endereço:
+                                    </h2>
+                                    <p class="doc-name-content" id="trd_addressTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        CPF/CNPJ:
+                                    </h2>
+                                    <p class="doc-name-content" id="trd_documentTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Email:
+                                    </h2>
+                                    <p class="doc-name-content" id="trd_emailTarget">
+                                        
+                                    </p>
+                                </div>
+                                <div class="doc-name-box">
+                                    <h2 class="doc-name">
+                                        Whatsapp/Telefone:
+                                    </h2>
+                                    <p class="doc-name-content" id="trd_phoneTarget">
+                                        
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -590,15 +1483,7 @@
                 </div>
                 <div class="doc-text-box">
                     <h2 class="doc-text-name">
-                        III. Antecipação de tutela
-                    </h2>
-                    <p class="doc-text" id="anticipationTextTarget">
-                        
-                    </p>
-                </div>
-                <div class="doc-text-box">
-                    <h2 class="doc-text-name">
-                        IV. Valor da causa
+                        III. Valor da causa
                     </h2>
                     <p class="doc-text">
                         Valor do dano moral: <span id="firstValue">R$ 5.000,00</span>
@@ -610,27 +1495,40 @@
                         Dá-se a causa o valor total de: <span id="thirdValue">R$ 10.000,00</span>
                     </p>
                 </div>
+                <div class="doc-text-box hidden" id="anticipationTextDisplay">
+                    <h2 class="doc-text-name">
+                        IV. Antecipação de tutela
+                    </h2>
+                    <p class="doc-text" id="anticipationTextTarget">
+                        
+                    </p>
+                </div>
                 </div>
                 <div class="doc-footer">
                     <p id="dateTarget">
                         
                     </p>
                     <div class="doc-signer-box">
-                        <h2 class="" id="signerNameTarget">
+                        <h2 class="" id="firstSignerNameTarget">
                             
                         </h2>
-                        <h2 class="" id="signerDocument">
+                        <h2 class="" id="firstSignerDocument">
                             
                         </h2>
                     </div>
-                    <div class="">
-                        <h2>
+                    <div class="doc-signer-box hidden" id="secondSignerDisplay">
+                        <h2 class="" id="secondSignerNameTarget">
                             
                         </h2>
-                        <h2>
+                        <h2 class="" id="secondSignerDocument">
                             
                         </h2>
-                        <h2>
+                    </div>
+                    <div class="doc-signer-box hidden" id="thirdSignerDisplay">
+                        <h2 class="" id="thirdSignerNameTarget">
+                            
+                        </h2>
+                        <h2 class="" id="thirdSignerDocument">
                             
                         </h2>
                     </div>
@@ -639,12 +1537,12 @@
     </div>
     <!-- FIM DO DOCUMENTO -->
     
-    <!-- INICIO DO DOCUMENTO 2 -->
-    <div id="doc2" style="display: none;">
+    <!-- INICIO DOS TERMOS -->
+    <div id="firstTerm" class="hidden">
             <div class="generated">
                 <p class="generated-text">
-                    documento gerado às <strong id="doc2HeaderTimeTarget"></strong>
-                        do dia <strong id="doc2HeaderDateTarget"></strong>
+                    documento gerado às <strong id="firstTermHeaderTimeTarget"></strong>
+                        do dia <strong id="firstTermHeaderDateTarget"></strong>
                 </p>
             </div>
             <div class="doc2-header">
@@ -671,15 +1569,15 @@
                 <div>
                     <p class="doc2-content">
                         Eu, 
-                        <span id="doc2NameTarget"></span>, CPF: 
-                        <span id="doc2DocumentTarget"></span>, residente e domiciliado rua 
-                        <span id="doc2StreetTarget"></span>
-                        <span id="doc2NumberTarget"></span> - 
-                        <span id="doc2DistrictTarget"></span> – 
-                        <span id="doc2CityStateTarget"></span> – 
-                        <span id="doc2PostalCodeTarget"></span>, adiro voluntariamente à utilização do aplicativo de mensagens Whatsapp para receber intimações decorrentes da tramitação do processo acima informado, enviadas a partir do número telefônico (número do telefone distribuído à Secretaria do Juizado Especial). Para tanto, informo que receberei as intimações no telefone celular número 
-                        <span id="doc2PhoneTarget"></span> ou pelo e-mail 
-                        <span id="doc2EmailTarget"></span> e assumo o compromisso de comunicar imediatamente ao juízo a alteração do número de telefone informado e assinar novo termo de adesão, reputando eficazes as intimações enviadas ao telefone anteriormente cadastrado na ausência de comunicação da mudança.
+                        <span id="firstTermNameTarget"></span>, CPF: 
+                        <span id="firstTermDocumentTarget"></span>, residente e domiciliado rua 
+                        <span id="firstTermStreetTarget"></span>
+                        <span id="firstTermNumberTarget"></span> - 
+                        <span id="firstTermDistrictTarget"></span> – 
+                        <span id="firstTermCityStateTarget"></span> – 
+                        <span id="firstTermPostalCodeTarget"></span>, adiro voluntariamente à utilização do aplicativo de mensagens Whatsapp para receber intimações decorrentes da tramitação do processo acima informado, enviadas a partir do número telefônico (número do telefone distribuído à Secretaria do Juizado Especial). Para tanto, informo que receberei as intimações no telefone celular número 
+                        <span id="firstTermPhoneTarget"></span> ou pelo e-mail 
+                        <span id="firstTermEmailTarget"></span> e assumo o compromisso de comunicar imediatamente ao juízo a alteração do número de telefone informado e assinar novo termo de adesão, reputando eficazes as intimações enviadas ao telefone anteriormente cadastrado na ausência de comunicação da mudança.
                     </p>
                     <p class="doc2-content">
                         Por este ato me declaro ciente do inteiro teor da Resolução Conjunta GP/CGJ n. 6 de 5 de outubro de 2017 e afirmo que:
@@ -707,12 +1605,154 @@
                 </div>
             </div>
             <div class="doc2-footer">
-                <p id="doc2DateTarget"></p>
-                <h4 id="doc2SignerTarget"></h4>
+                <p class="term-full-date" id="firstTermDateTarget"></p>
+                <h4 class="term-signer-name" id="firstTermSignerTarget"></h4>
             </div>
     </div>
+    <div id="secondTerm" class="hidden">
+        <div class="generated">
+            <p class="generated-text">
+                documento gerado às <strong id="secondTermHeaderTimeTarget"></strong>
+                    do dia <strong id="secondTermHeaderDateTarget"></strong>
+            </p>
+        </div>
+        <div class="doc2-header">
+            <div class="image-box">
+                <img width="232" height="86" alt="" src="../../images/PJSC-H-Poder Judiciario.png">
+            </div>
+            <div class="doc2-header-address-box">
+                <p class="doc2-header-address">
+                    Rua Mariana Michels Borges, 776 - Bairro: Itapema do Norte - CEP: 89249-000 - Fone: (47)3443-8000 - Email:
+                    itapoa.vara1@tjsc.jus.br
+                </p>
+            </div>
+        </div>
+        <h1 class="doc2-title">
+            TERMO DE ADESÃO
+        </h1>
+        <div class="doc2-body">
+            <h3 class="doc2-title2">
+                Autos n.
+            </h3>
+            <p class="doc2-content">
+                Classe do Processo PROCEDIMENTO DO JUIZADO ESPECIAL DA FAZENDA PÚBLICA
+            </p>
+            <div>
+                <p class="doc2-content">
+                    Eu, 
+                    <span id="secondTermNameTarget"></span>, CPF: 
+                    <span id="secondTermDocumentTarget"></span>, residente e domiciliado rua 
+                    <span id="secondTermStreetTarget"></span>
+                    <span id="secondTermNumberTarget"></span> - 
+                    <span id="secondTermDistrictTarget"></span> – 
+                    <span id="secondTermCityStateTarget"></span> – 
+                    <span id="secondTermPostalCodeTarget"></span>, adiro voluntariamente à utilização do aplicativo de mensagens Whatsapp para receber intimações decorrentes da tramitação do processo acima informado, enviadas a partir do número telefônico (número do telefone distribuído à Secretaria do Juizado Especial). Para tanto, informo que receberei as intimações no telefone celular número 
+                    <span id="secondTermPhoneTarget"></span> ou pelo e-mail 
+                    <span id="secondTermEmailTarget"></span> e assumo o compromisso de comunicar imediatamente ao juízo a alteração do número de telefone informado e assinar novo termo de adesão, reputando eficazes as intimações enviadas ao telefone anteriormente cadastrado na ausência de comunicação da mudança.
+                </p>
+                <p class="doc2-content">
+                    Por este ato me declaro ciente do inteiro teor da Resolução Conjunta GP/CGJ n. 6 de 5 de outubro de 2017 e afirmo que:
+                </p>
+                <ul>
+                    <li class="doc2-content list">
+                        concordo com os termos da Resolução Conjunta GP/CGJ n. 6 de 5 de outubro de 2017 e com a intimação efetuada por meio do aplicativo de mensagens do Whatsapp;
+                    </li>
+                    <li class="doc2-content list">
+                        possuo o aplicativo de mensagens Whatsapp no aparelho de telefone ora informado;
+                    </li>
+                    <li class="doc2-content list">
+                        manterei ativa, na configuração de privacidade do aplicativo de mensagens Whatsapp, a opção recibo/confirmação de leitura;
+                    </li>
+                    <li class="doc2-content list">
+                        fui informado (a) sobre o número de telefone que será utilizado pela secretaria do Juizado Especial para realizar as intimações com a utilização do aplicativo de mensagens Whatsapp;
+                    </li>
+                    <li class="doc2-content list">
+                        fui cientificado (a) de que o Poder Judiciário do Estado de Santa Catarina, em nenhuma hipótese, solicita dados pessoais, bancários ou quaisquer outros de caráter sigiloso, limitando-se à utilização do aplicativo de mensagens Whatsapp para efetuar intimações; e
+                    </li>
+                    <li class="doc2-content list">
+                        Fui cientificado (a) de que as dúvidas referentes à intimação deverão ser tratadas exclusivamente na Secretaria do Juizado Especial na qual tramita o processo referido neste termo.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="doc2-footer">
+            <p class="term-full-date" id="secondTermDateTarget"></p>
+            <h4 class="term-signer-name" id="secondTermSignerTarget"></h4>
+        </div>
+    </div>
+    <div id="thirdTerm" class="hidden">
+        <div class="generated">
+            <p class="generated-text">
+                documento gerado às <strong id="thirdTermHeaderTimeTarget"></strong>
+                    do dia <strong id="thirdTermHeaderDateTarget"></strong>
+            </p>
+        </div>
+        <div class="doc2-header">
+            <div class="image-box">
+                <img width="232" height="86" alt="" src="../../images/PJSC-H-Poder Judiciario.png">
+            </div>
+            <div class="doc2-header-address-box">
+                <p class="doc2-header-address">
+                    Rua Mariana Michels Borges, 776 - Bairro: Itapema do Norte - CEP: 89249-000 - Fone: (47)3443-8000 - Email:
+                    itapoa.vara1@tjsc.jus.br
+                </p>
+            </div>
+        </div>
+        <h1 class="doc2-title">
+            TERMO DE ADESÃO
+        </h1>
+        <div class="doc2-body">
+            <h3 class="doc2-title2">
+                Autos n.
+            </h3>
+            <p class="doc2-content">
+                Classe do Processo PROCEDIMENTO DO JUIZADO ESPECIAL DA FAZENDA PÚBLICA
+            </p>
+            <div>
+                <p class="doc2-content">
+                    Eu, 
+                    <span id="thirdTermNameTarget"></span>, CPF: 
+                    <span id="thirdTermDocumentTarget"></span>, residente e domiciliado rua 
+                    <span id="thirdTermStreetTarget"></span>
+                    <span id="thirdTermNumberTarget"></span> - 
+                    <span id="thirdTermDistrictTarget"></span> – 
+                    <span id="thirdTermCityStateTarget"></span> – 
+                    <span id="thirdTermPostalCodeTarget"></span>, adiro voluntariamente à utilização do aplicativo de mensagens Whatsapp para receber intimações decorrentes da tramitação do processo acima informado, enviadas a partir do número telefônico (número do telefone distribuído à Secretaria do Juizado Especial). Para tanto, informo que receberei as intimações no telefone celular número 
+                    <span id="thirdTermPhoneTarget"></span> ou pelo e-mail 
+                    <span id="thirdTermEmailTarget"></span> e assumo o compromisso de comunicar imediatamente ao juízo a alteração do número de telefone informado e assinar novo termo de adesão, reputando eficazes as intimações enviadas ao telefone anteriormente cadastrado na ausência de comunicação da mudança.
+                </p>
+                <p class="doc2-content">
+                    Por este ato me declaro ciente do inteiro teor da Resolução Conjunta GP/CGJ n. 6 de 5 de outubro de 2017 e afirmo que:
+                </p>
+                <ul>
+                    <li class="doc2-content list">
+                        concordo com os termos da Resolução Conjunta GP/CGJ n. 6 de 5 de outubro de 2017 e com a intimação efetuada por meio do aplicativo de mensagens do Whatsapp;
+                    </li>
+                    <li class="doc2-content list">
+                        possuo o aplicativo de mensagens Whatsapp no aparelho de telefone ora informado;
+                    </li>
+                    <li class="doc2-content list">
+                        manterei ativa, na configuração de privacidade do aplicativo de mensagens Whatsapp, a opção recibo/confirmação de leitura;
+                    </li>
+                    <li class="doc2-content list">
+                        fui informado (a) sobre o número de telefone que será utilizado pela secretaria do Juizado Especial para realizar as intimações com a utilização do aplicativo de mensagens Whatsapp;
+                    </li>
+                    <li class="doc2-content list">
+                        fui cientificado (a) de que o Poder Judiciário do Estado de Santa Catarina, em nenhuma hipótese, solicita dados pessoais, bancários ou quaisquer outros de caráter sigiloso, limitando-se à utilização do aplicativo de mensagens Whatsapp para efetuar intimações; e
+                    </li>
+                    <li class="doc2-content list">
+                        Fui cientificado (a) de que as dúvidas referentes à intimação deverão ser tratadas exclusivamente na Secretaria do Juizado Especial na qual tramita o processo referido neste termo.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="doc2-footer">
+            <p class="term-full-date" id="thirdTermDateTarget"></p>
+            <h4 class="term-signer-name" id="thirdTermSignerTarget"></h4>
+        </div>
+    </div>
     <!-- FIM DO DOCUMENTO -->
-    <footer style="display: flex;" id="pageFooter">
+    <footer id="pageFooter">
         <div class="footer-container">
             <h1 class="footer-title">
                 Poder Judiciário de Santa Catarina
@@ -748,27 +1788,18 @@
             </span>
         </div>
     </footer>
-    <!-- <div id="modal" class="modal-box">
-        <div class="modal-inside">
-            <div class="modal-header">
-                <div></div>
-                <p class="modal-header-text">
-                    Seu documento está pronto
-                </p>
-                <img id="modalClose" width="20" height="20" src="../../images/xmark-solid.svg" alt="">
-            </div>
-            <p class="modal-text">
-                Seu documento foi gerado com sucesso,
-                clique em imprimir para realizar o download.
-            </p>
-            <div class="modal-footer">
-                <a href="" class="btn" id="modalSend">Continuar</a>
-            </div>
-        </div>
-    </div>    -->
-    <script src="../../jQuery/jquery-3.7.0.min.js" defer></script>
-    <script src="../../jQuery/jquery.mask.js" defer></script>
-    <script src="../../jQuery/jquery.maskMoney.min.js" defer></script>
-    <script src="../../dist/test.bundle.js" defer></script>
+    <script src="../../libs/jquery-3.7.0.min.js" defer></script>
+    <script src="../../libs/jquery.mask.js" defer></script>
+    <script src="../../libs/jquery.maskMoney.min.js" defer></script>
+    <script src="../../dist/app.bundle.js" defer></script>
+    
+
+    <script type="text/javascript">
+        window.onbeforeunload = function() {
+            return "Tem a certeza que quer sair da pagina?";
+        }
+    </script>
+
+
 </body>
 </html>

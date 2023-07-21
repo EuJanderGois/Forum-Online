@@ -148,7 +148,7 @@ a {
     font-size: .8rem;
 }
 .hidden {
-    display: none;
+    display: none !important;
 }
 footer {
     display: flex;
