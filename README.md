@@ -1,4 +1,4 @@
-<h1 align="center">Formulário de Geração de Documentos</h1>
+<h1 align="center">Forum Online</h1>
 
 Este projeto tem como objetivo faclilitar a geração de documentos necessários para a solicitação de **Reclamação de Juizado especial Cível**, utilizando ferramentas Web descritas e detalhadas abaixo.
 
